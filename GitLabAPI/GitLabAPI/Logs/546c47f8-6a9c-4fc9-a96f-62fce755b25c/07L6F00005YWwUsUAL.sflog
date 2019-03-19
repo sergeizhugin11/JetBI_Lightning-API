@@ -1,0 +1,29 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutWithAccessToken('123');
+05:42:46.1 (1681507)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+05:42:46.1 (1703762)|EXECUTION_STARTED
+05:42:46.1 (1708384)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+05:42:46.1 (2293987)|SYSTEM_MODE_ENTER|false
+05:42:46.1 (15052861)|CALLOUT_REQUEST|[27]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?private_token=smbWfeqt_UZnU1HQS6vQ, Method=POST]
+05:42:46.1 (915614299)|CALLOUT_RESPONSE|[27]|System.HttpResponse[Status=Bad Request, StatusCode=400]
+05:42:46.1 (915741339)|USER_DEBUG|[28]|DEBUG|{"message":{"name":["has already been taken"],"path":["has already been taken"],"limit_reached":[]}}
+05:42:46.1 (915845602)|SYSTEM_MODE_EXIT|false
+05:42:46.917 (917807247)|CUMULATIVE_LIMIT_USAGE
+05:42:46.917 (917807247)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+05:42:46.917 (917807247)|CUMULATIVE_LIMIT_USAGE_END
+
+05:42:46.1 (917869870)|CODE_UNIT_FINISHED|execute_anonymous_apex
+05:42:46.1 (918905035)|EXECUTION_FINISHED

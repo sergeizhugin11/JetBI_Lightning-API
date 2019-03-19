@@ -1,0 +1,30 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetAccessToken('1');
+08:58:04.1 (1538827)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+08:58:04.1 (1557175)|EXECUTION_STARTED
+08:58:04.1 (1561482)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+08:58:04.1 (1940019)|SYSTEM_MODE_ENTER|false
+08:58:04.1 (12918561)|CALLOUT_REQUEST|[53]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/oauth/token, Method=POST]
+08:58:05.501 (1501689431)|CALLOUT_RESPONSE|[53]|System.HttpResponse[Status=Unauthorized, StatusCode=401]
+08:58:05.501 (1501780856)|USER_DEBUG|[55]|DEBUG|System.HttpResponse[Status=Unauthorized, StatusCode=401]
+08:58:05.501 (1501842385)|USER_DEBUG|[56]|DEBUG|{"error":"invalid_grant","error_description":"The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client."}
+08:58:05.501 (1501858556)|SYSTEM_MODE_EXIT|false
+08:58:05.504 (1504468949)|CUMULATIVE_LIMIT_USAGE
+08:58:05.504 (1504468949)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+08:58:05.504 (1504468949)|CUMULATIVE_LIMIT_USAGE_END
+
+08:58:05.501 (1504519977)|CODE_UNIT_FINISHED|execute_anonymous_apex
+08:58:05.501 (1505645873)|EXECUTION_FINISHED

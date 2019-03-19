@@ -1,0 +1,272 @@
+<apex:page controller="Goods_Table_Controller">
+    <apex:slds />
+    <apex:pageMessages id="showmsg"></apex:pageMessages>
+    <apex:form >
+		<script>
+        function func01() {
+            document.getElementById('but_01').style.display='inline';document.getElementById('but_02').style.display='none';
+            }
+        function func02() {
+            document.getElementById('but_02').style.display='inline';document.getElementById('but_01').style.display='none';
+            }
+        
+
+        
+        </script>
+        <style> 
+     	span.dateInput span.dateFormat{
+       		display:none;
+    	}
+		</style>
+        
+  
+    <div class="demo-only" style="height: 640px;display:none; z-index: 999;position: relative" id="id_01">
+      	<section role="dialog" id="mushrooms" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            
+            <div class="slds-modal__container">
+            	<header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse" title="Close">
+                      <svg class="slds-button__icon slds-button__icon_large" aria-hidden="true">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#close" />
+                      </svg>
+                      <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">New Goods</h2>
+                </header>
+               
+               <apex:outputPanel id="mushrooms">
+                   
+               	<apex:outputPanel id="mushroomsiscool01" rendered="{!bolk}" >
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                      <span class="slds-assistive-text">error</span>
+                      <h2>Name is required field       
+                      </h2>
+                    </div>
+                </apex:outputPanel>
+                   
+                <apex:outputPanel id="mushroomsiscool02" rendered="{!bolkDate}" >
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_error" role="alert">
+                      <span class="slds-assistive-text">error</span>
+                      <h2>Added date can not be past date      
+                      </h2>
+                    </div>
+                </apex:outputPanel>
+                   
+                 <apex:outputPanel id="mushroomsiscool03" rendered="{!saveren}" >
+                    <div class="slds-notify slds-notify_alert slds-theme_alert-texture slds-theme_success" role="alert">
+                      <span class="slds-assistive-text">success</span>
+                      <h2>Goods was created      
+                      </h2>
+                    </div>
+                </apex:outputPanel>
+                   
+              	<div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+					<div class="slds-form-element">
+						<label class="slds-form-element__label" for="Name_is_required">Name</label>
+						<div class="slds-form-element__control">
+							<apex:inputText id="Name_is_required" styleClass="slds-input" value="{! Name }"/>
+						</div>
+					</div>
+                    
+                    <div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-2">Price</label>
+						<div class="slds-form-element__control">
+							<apex:inputText id="text-input-id-2" styleClass="slds-input" value="{! Price }"/>
+						</div>
+					</div>
+                    
+                    <div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-3">Amount</label>
+						<div class="slds-form-element__control">
+							<apex:inputText id="text-input-id-3" styleClass="slds-input" value="{! Amount }"/>
+						</div>
+					</div>
+                    
+                    <div class="slds-form-element">
+						<label class="slds-form-element__label">Type(Phones,Laptops,Tablets)</label>
+						<div class="slds-form-element__control">
+							<apex:selectList value="{!Type}" size="1" required="true" style="border-radius:10px;border:1px solid #e2e0df;padding:5px">
+
+    							<apex:selectOptions value="{!items}"/>
+
+                        	</apex:selectList>
+						</div>
+                    </div>
+
+
+                    
+                    <div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-5">Added Date</label>
+						<div class="slds-form-element__control" style="margin: 0px 500px 0px 0;">
+							<apex:inputField id="text-input-id-5" styleClass="slds-input" value="{! Data_01.Birthdate }"/>
+						</div>
+					</div>
+                    
+                    <div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-6">Release Date</label>
+						<div class="slds-form-element__control" style="margin: 0px 500px 0px 0;padding:0 0 0 0;">
+							<apex:inputField id="text-input-id-6" styleClass="slds-input" value="{! Data_02.Birthdate }"/>
+						</div>
+					</div>
+                    
+                    <div class="slds-form-element">
+						<label class="slds-form-element__label" for="text-input-id-7">Available</label>
+						<div class="slds-form-element__control" style="margin: 0px 590px 0px 0;padding:0 0 0 0;">
+							<apex:inputCheckbox id="text-input-id-7" value="{! Available }"/>
+						</div>
+					</div>
+              	</div>
+                </apex:outputPanel>
+              	<footer class="slds-modal__footer">
+                    <input type="button" class="slds-button slds-button_neutral" onclick="document.getElementById('id_01').style.display='none';methodOneInJavascript_03();" value="Cancel" />
+                    <apex:actionFunction action="{!deleteVal}" name="methodOneInJavascript_03" rerender="mushrooms"/>
+                	<apex:commandButton action="{!save}" rerender="pgblckID, mushrooms" value="Save"  styleClass="slds-button slds-button_brand"/>
+              	</footer>
+            </div>
+      	</section>
+		<div class="slds-backdrop slds-backdrop_open"></div>
+	</div>
+ 
+    
+        
+    <span style="z-index: 2;position: relative">
+        <div class="slds-page-header">
+          <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+              <p class="slds-text-title_caps slds-line-height_reset">My application</p>
+              <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="My Contacts">Goods Manager</h1>
+            </div>
+              
+              <fieldset class="slds-form-element">
+              <legend class="slds-form-element__legend slds-form-element__label" style="float:left">Select Search</legend>
+                  <div class="slds-form-element__control" style="float:right">
+                    <span class="slds-radio">
+                      <input type="radio"  id="radio-3" value="radio-3" name="options" checked="true" onclick="func01()" />
+                      <label class="slds-radio__label" for="radio-3">
+                        <span class="slds-radio_faux"></span>
+                        <span class="slds-form-element__label">By Name</span>
+                      </label>
+                    </span>
+                    <span class="slds-radio">
+                      <input type="radio" id="radio-4" value="radio-4" name="options" onclick="func02()"/>
+                      <label class="slds-radio__label" for="radio-4">
+                        <span class="slds-radio_faux"></span>
+                        <span class="slds-form-element__label">By Date</span>
+                      </label>
+                    </span>
+                  </div>
+            </fieldset>
+              
+              
+              
+              
+              		<div class="slds-form-element" style="margin: 0px 20px 0px 0;padding:0 0 0 0;display:inline;z-index: 2;" id="but_01">
+						
+                            <apex:inputText id="text-input-id-0" styleClass="slds-input" value="{! Searcch }" style="width:70%;height=10px;"/>
+                            <apex:commandButton action="{!SearchByName}" rerender="pgblckID" value="Search" style="width:30%;height=10px;" styleClass="slds-button slds-button_neutral"/>
+                            
+						
+					</div>
+              
+              		<div class="slds-form-element" style="margin: 0px 50px 0px 0;padding:0 0 0 0;display:none;z-index: 1;" id="but_02">
+						
+                            <apex:inputField id="text-input-id-01" styleClass="slds-input" value="{! Searcch2.Birthdate }" style="width:60%;height=10px;"/>
+                            <apex:commandButton action="{!SearchByDate}" rerender="pgblckID" value="Search" style="width:40%;height=10px;" styleClass="slds-button slds-button_neutral"/>
+						
+					</div>
+                <input type="button" class="slds-button slds-button_brand" value="New" onclick="getElementById('id_01').style.display='inline'" />
+              	<apex:commandButton action="{!processSelected}" rerender="pgblckID" value="Delete" styleClass="slds-button slds-button_destructive"/>
+          </div>
+        </div> 
+
+        <apex:pageBlock id="pgblckID">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate"></div>
+                        </th>
+                        <th scope="col">
+                            <button id="id_001"  onclick="methodOneInJavascript_01();return false;" style="z-index: 2;border: 0;padding: 0;background-color:white;">
+                            <div class="slds-tr	uncate">Name
+
+                             	<apex:outputPanel rendered="{!irr}">&#8593;</apex:outputPanel>
+                         		<apex:outputPanel rendered="{!irr1}">&#8595;</apex:outputPanel>
+                             	<!--<button id="id_002" onclick="methodOneInJavascript_02();getElementById('id_001').style.display='inline';getElementById('id_002').style.display='none';return false;" style="border: 0;padding: 0;z-index: 1;background-color:white;display:none;"><span>&#8595;</span></button>  -->  
+                                <apex:actionFunction action="{!Sort_01}" name="methodOneInJavascript_01" rerender="pgblckID"/>
+								<!--<apex:actionFunction action="{!Sort_02}" name="methodOneInJavascript_02" rerender=""/>-->
+                            </div>
+                            </button>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Price</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Amount</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Type</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Added Date</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Release Date</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Available</div>
+                        </th>
+                    </tr>
+                </thead>
+                
+                <tbody  >
+                    
+                    <apex:repeat value="{! GoodsTable }" var="gt">
+                        <tr>
+                            <td class = "slds-truncate">
+                            	<apex:inputCheckbox value="{!gt.selected}"/>
+                            </td>
+                            <th scope = "row">
+                                <div class = "slds-truncate">{!gt.con.Name__c}</div>
+                            </th>
+                            <td>
+                                <div class = "slds-truncate">{!gt.con.Price__c}</div>
+                            </td>
+                            <td>
+                                <div class = "slds-truncate">{! gt.con.Amount__c }</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate">{! gt.con.Type__c }</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate">{! gt.con.Added_Date__c }</div>
+                            </td>
+                            <td>
+                                <div class="slds-truncate">{! gt.con.Release_Date__c }</div>
+                            </td> 
+                            <td>
+                                <div class="slds-truncate">{! gt.con.Available__c }</div>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                        
+                </tbody>
+            </table>
+            <div align="center">
+                 <apex:commandButton value="First Page" action="{!Firstbtn}" disabled="{!prv}" reRender="pgblckID" styleclass="slds-button slds-button_neutral"/>
+                 <apex:commandButton value="PreviousPage" action="{!prvbtn}" disabled="{!prv}" reRender="pgblckID" styleclass="slds-button slds-button_neutral"/>
+                 <apex:commandButton value="NextPage" action="{!Nxtbtn}" disabled="{!nxt}" reRender="pgblckID" styleclass="slds-button slds-button_neutral"/>
+                 <apex:commandButton value="LastPage" action="{!lstbtn}" disabled="{!nxt}" reRender="pgblckID" styleclass="slds-button slds-button_neutral"/>
+ 			</div>
+ 			<span>Display records per page</span>  
+            <apex:selectList value="{!rec}" size="1" Styleclass="slds-combobox_container slds-size_small">
+                   <apex:selectOption itemLabel="50" itemValue="50" ></apex:selectOption>
+                   <apex:selectOption itemLabel="20" itemValue="20"></apex:selectOption>
+                   <apex:selectOption itemLabel="10" itemValue="10"></apex:selectOption>
+                   <apex:actionSupport event="onchange" reRender="pgblckID" action="{!updatePage}" />
+  			</apex:selectList>
+        </apex:pageBlock>
+	</span>
+	</apex:form>
+
+</apex:page>

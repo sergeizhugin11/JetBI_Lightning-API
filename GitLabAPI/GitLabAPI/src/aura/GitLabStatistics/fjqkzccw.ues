@@ -1,0 +1,3 @@
+.THIS #buttonStateful{
+    border: 0px double black;
+}

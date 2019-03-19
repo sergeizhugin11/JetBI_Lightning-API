@@ -1,0 +1,29 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetMostActiveCommiter('1');
+01:55:07.2 (2592633)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+01:55:07.2 (2613011)|EXECUTION_STARTED
+01:55:07.2 (2618266)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+01:55:07.2 (3039495)|SYSTEM_MODE_ENTER|false
+01:55:07.2 (27981432)|CALLOUT_REQUEST|[88]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects/1/repository/commits?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033&with_stats=true, Method=GET]
+01:55:07.2 (847990478)|CALLOUT_RESPONSE|[88]|System.HttpResponse[Status=OK, StatusCode=200]
+01:55:07.2 (851952170)|USER_DEBUG|[90]|DEBUG|[{"id":"665590e3cfa15fe38d41939b2cbb41522b9d2b83","short_id":"665590e3","title":"Two types of autorization on Lab v.3","created_at":"2019-02-12T14:11:18.000Z","parent_ids":["576243f4119bf86a713d2af037f7e7dce153e8a6"],"message":"Two types of autorization on Lab v.3\n","author_name":"Sergey","author_email":"sergei.zhugin11@gmail.com","authored_date":"2019-02-12T14:11:18.000Z","committer_name":"Sergey","committer_email":"sergei.zhugin11@gmail.com","committed_date":"2019-02-12T14:11:18.000Z","stats":{"additions":1734,"deletions":294,"total":2028}},{"id":"576243f4119bf86a713d2af037f7e7dce153e8a6","short_id":"576243f4","title":"Two types of autorization on Lab v.2","created_at":"2019-02-11T16:26:24.000Z","parent_ids":["5dcd0a21f5665c925118c157eed349adacf26da3"],"message":"Two types of autorization on Lab v.2\n","author_name":"Sergey","author_email":"sergei.zhugin11@gmail.com","authored_date":"2019-02-11T16:26:24.000Z","committer_name":"Sergey","committer_email":"sergei.zhugin11@gmail.com","committed_date":"2019-02-11T16:26:24.000Z","stats":{"additions":3469,"deletions":65,"total":3534}},{"id":"5dcd0a21f5665c925118c157eed349adacf26da3","short_id":"5dcd0a21","title":"Two types of autorization on Lab","created_at":"2019-02-08T15:20:23.000Z","parent_ids":["86992b17b262b03b8d12e711976caeeec66bf890","937dea09f25a2f8e4e86958c5258440b79ec0dda"],"message":"Two types of autorization on Lab\n","author_name":"Sergey","author_email":"sergei.zhugin11@gmail.com","authored_date":"2019-02-08T15:20:23.000Z","committer_name":"Sergey","committer_email":"sergei.zhugin11@gmail.com","committed_date":"2019-02-08T15:20:23.000Z","stats":{"additions":3,"deletions":0,"total":3}},{"id":"86992b17b262b03b8d12e711976caeeec66bf890","short_id":"86992b17","title":"Two types of autorization on GitLab","created_at":"2019-02-08T15:12:04.000Z","parent_ids":[],"message":"Two types of autorization on GitLab\n","author_name":"Sergey","author_email":"sergei.zhugin11@gmail.com","authored_date":"2019-02-08T15:12:04.000Z","committer_name":"Sergey","committer_email":"sergei.zhugin11@gmail.com","committed_date":"2019-02-08T15:12:04.000Z","stats":{"additions":14089,"deletions":0,"total":14089}},{"id":"937dea09f25a2f8e4e86958c5258440b79ec0dda","short_id":"937dea09","title":"Initial commit","created_at":"2019-02-06T10:24:03.000Z","parent_ids":[],"message":"Initial commit","author_name":"sergei.zhugin11","author_email":"sergei.zhugin11@gmail.com","authored_date":"2019-02-06T10:24:03.000Z","committer_name":"sergei.zhugin11","committer_email":"sergei.zhugin11@gmail.com","committed_date":"2019-02-06T10:24:03.000Z","stats":{"additions":2,"deletions":0,"total":2}}]
+01:55:07.2 (853184149)|SYSTEM_MODE_EXIT|false
+01:55:07.855 (855765243)|CUMULATIVE_LIMIT_USAGE
+01:55:07.855 (855765243)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+01:55:07.855 (855765243)|CUMULATIVE_LIMIT_USAGE_END
+
+01:55:07.2 (855835655)|CODE_UNIT_FINISHED|execute_anonymous_apex
+01:55:07.2 (857110569)|EXECUTION_FINISHED

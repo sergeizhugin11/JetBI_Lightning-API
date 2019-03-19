@@ -1,0 +1,27 @@
+.THIS .buttonStateful:active{
+    background-color: RGB(255, 255, 255);
+    border: 0px double black;
+    outline: none !important;
+    box-shadow: none;
+}
+.THIS .buttonStateful:focus{
+    background-color: RGB(255, 255, 255);
+    border: 0px double black;
+    outline: none !important;
+    box-shadow: none;
+}
+.THIS .buttonStateful:hover{
+    background-color: RGB(255, 255, 255);
+    border: 0px double black;
+    outline: none !important;
+    box-shadow: none;
+}
+
+.THIS .buttonStateful{
+    background-color: RGB(255, 255, 255);
+    border: 0px double black;
+    outline: none !important;
+    box-shadow: none;
+
+
+}

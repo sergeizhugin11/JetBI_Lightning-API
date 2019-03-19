@@ -1,0 +1,31 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: System.debug(GitLabUtils.makeCalloutToGetAccessToken('123'));
+07:47:34.1 (1257624)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+07:47:34.1 (1280922)|EXECUTION_STARTED
+07:47:34.1 (1285818)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+07:47:34.1 (1783499)|SYSTEM_MODE_ENTER|false
+07:47:34.1 (16565992)|USER_DEBUG|[58]|DEBUG|client_id=d6804166bcfc563ea34560fa5343310d346bd25385b5111b52c749ab5e155b26&client_secret=eb5dd4f1a9e83f06ea0ab4c3997a9d8659dc07aafe3a239174aa0d592610e1ba&code=09d2f359e6073c79e501d75af31e2d5548cbc4bcc1ad999862c8d4c3cb94bdc1&grant_type=authorization_code&redirect_uri=https://gitlab.com/
+07:47:34.1 (16647081)|CALLOUT_REQUEST|[59]|System.HttpRequest[Endpoint=https://gitlab.com/oauth/token, Method=POST]
+07:47:34.1 (797688896)|CALLOUT_RESPONSE|[59]|System.HttpResponse[Status=OK, StatusCode=200]
+07:47:34.1 (797829905)|USER_DEBUG|[60]|DEBUG|{"access_token":"4e9264aa43e6769411b2dc8828b07ea794d3b347b22d17a54e7b9506f0a13f7d","token_type":"bearer","refresh_token":"6a5d2ecb6d7a97f7bc8e7ecffc18a882f2dee4a86bafdd04b810ab80be3d081b","scope":"api","created_at":1552060055}
+07:47:34.1 (798606189)|SYSTEM_MODE_EXIT|false
+07:47:34.1 (798632244)|USER_DEBUG|[1]|DEBUG|4e9264aa43e6769411b2dc8828b07ea794d3b347b22d17a54e7b9506f0a13f7d
+07:47:34.800 (800594831)|CUMULATIVE_LIMIT_USAGE
+07:47:34.800 (800594831)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+07:47:34.800 (800594831)|CUMULATIVE_LIMIT_USAGE_END
+
+07:47:34.1 (800663428)|CODE_UNIT_FINISHED|execute_anonymous_apex
+07:47:34.1 (801463010)|EXECUTION_FINISHED

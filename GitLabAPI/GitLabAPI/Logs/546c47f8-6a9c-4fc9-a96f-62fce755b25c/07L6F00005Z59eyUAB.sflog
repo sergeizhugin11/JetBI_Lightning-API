@@ -1,0 +1,40 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetNumberOfProj();
+04:44:15.1 (1233510)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+04:44:15.1 (1254421)|EXECUTION_STARTED
+04:44:15.1 (1258634)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+04:44:15.1 (1691793)|SYSTEM_MODE_ENTER|false
+04:44:15.1 (18780296)|CALLOUT_REQUEST|[71]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects/?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=GET]
+04:44:15.1 (833235687)|CALLOUT_RESPONSE|[71]|System.HttpResponse[Status=OK, StatusCode=200]
+04:44:15.1 (852819185)|USER_DEBUG|[75]|DEBUG|39
+04:44:15.1 (852859279)|USER_DEBUG|[76]|DEBUG|9999789
+04:44:15.1 (852884368)|USER_DEBUG|[75]|DEBUG|38
+04:44:15.1 (852894825)|USER_DEBUG|[76]|DEBUG|123434
+04:44:15.1 (852910314)|USER_DEBUG|[75]|DEBUG|37
+04:44:15.1 (852919506)|USER_DEBUG|[76]|DEBUG|123
+04:44:15.1 (852933541)|USER_DEBUG|[75]|DEBUG|36
+04:44:15.1 (852941931)|USER_DEBUG|[76]|DEBUG|PMTools
+04:44:15.1 (852955053)|USER_DEBUG|[75]|DEBUG|34
+04:44:15.1 (852963235)|USER_DEBUG|[76]|DEBUG|SalesforceProject.v.2
+04:44:15.1 (852976472)|USER_DEBUG|[75]|DEBUG|1
+04:44:15.1 (852985445)|USER_DEBUG|[76]|DEBUG|SalesforceProject
+04:44:15.1 (853068114)|SYSTEM_MODE_EXIT|false
+04:44:15.855 (855390927)|CUMULATIVE_LIMIT_USAGE
+04:44:15.855 (855390927)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+04:44:15.855 (855390927)|CUMULATIVE_LIMIT_USAGE_END
+
+04:44:15.1 (855454720)|CODE_UNIT_FINISHED|execute_anonymous_apex
+04:44:15.1 (856472378)|EXECUTION_FINISHED

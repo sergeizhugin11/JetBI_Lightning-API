@@ -1,0 +1,29 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetCommits('1');
+09:03:26.1 (1725836)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+09:03:26.1 (1750311)|EXECUTION_STARTED
+09:03:26.1 (1755432)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+09:03:26.1 (2262534)|SYSTEM_MODE_ENTER|false
+09:03:26.1 (7300975)|CALLOUT_REQUEST|[118]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects/1/repository/commits?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033&with_stats=true, Method=GET]
+09:03:26.1 (777637927)|CALLOUT_RESPONSE|[118]|System.HttpResponse[Status=OK, StatusCode=200]
+09:03:26.1 (783511147)|USER_DEBUG|[134]|DEBUG|(CommitsWrapper:[addLines=1734, authorName=Sergey, commitsName=Two types of autorization on Lab v.3, createDate=null, delLines=294], CommitsWrapper:[addLines=3469, authorName=Sergey, commitsName=Two types of autorization on Lab v.2, createDate=null, delLines=65], CommitsWrapper:[addLines=3, authorName=Sergey, commitsName=Two types of autorization on Lab, createDate=null, delLines=0], CommitsWrapper:[addLines=14089, authorName=Sergey, commitsName=Two types of autorization on GitLab, createDate=null, delLines=0], CommitsWrapper:[addLines=2, authorName=sergei.zhugin11, commitsName=Initial commit, createDate=null, delLines=0])
+09:03:26.1 (783544423)|SYSTEM_MODE_EXIT|false
+09:03:26.785 (785909864)|CUMULATIVE_LIMIT_USAGE
+09:03:26.785 (785909864)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:03:26.785 (785909864)|CUMULATIVE_LIMIT_USAGE_END
+
+09:03:26.1 (785958040)|CODE_UNIT_FINISHED|execute_anonymous_apex
+09:03:26.1 (787229558)|EXECUTION_FINISHED

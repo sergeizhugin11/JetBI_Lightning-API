@@ -1,0 +1,35 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetCode();
+04:21:57.1 (1253447)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+04:21:57.1 (1275102)|EXECUTION_STARTED
+04:21:57.1 (1279958)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+04:21:57.1 (1648634)|SYSTEM_MODE_ENTER|false
+04:21:57.1 (3283846)|CALLOUT_REQUEST|[34]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/oauth/authorize?client_id=1ff434db62169297767842e2e9f3ca0ffc9941aa96fe9a227f169006ac1e54ad&response_type=code&redirect_uri=https://sergeizhugin-developer-edition.ap4.force.com&state=1234567890, Method=GET]
+04:21:57.1 (556036399)|CALLOUT_RESPONSE|[34]|System.HttpResponse[Status=Found, StatusCode=302]
+04:21:57.1 (556154724)|USER_DEBUG|[35]|DEBUG|null
+04:21:57.1 (556185465)|USER_DEBUG|[36]|DEBUG|System.HttpResponse[Status=Found, StatusCode=302]
+04:21:57.1 (556215933)|USER_DEBUG|[37]|DEBUG|no-cache
+04:21:57.1 (556235347)|USER_DEBUG|[38]|DEBUG|1; mode=block
+04:21:57.1 (556251361)|USER_DEBUG|[39]|DEBUG|keep-alive
+04:21:57.1 (556266795)|USER_DEBUG|[40]|DEBUG|Fri, 08 Feb 2019 12:21:57 GMT
+04:21:57.1 (556370826)|USER_DEBUG|[42]|DEBUG|(Server, X-Request-Id, X-Runtime, X-Content-Type-Options, Connection, Date, X-Frame-Options, Strict-Transport-Security, Cache-Control, X-Xss-Protection, ...)
+04:21:57.1 (556391137)|SYSTEM_MODE_EXIT|false
+04:21:57.558 (558329349)|CUMULATIVE_LIMIT_USAGE
+04:21:57.558 (558329349)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+04:21:57.558 (558329349)|CUMULATIVE_LIMIT_USAGE_END
+
+04:21:57.1 (558376357)|CODE_UNIT_FINISHED|execute_anonymous_apex
+04:21:57.1 (559205989)|EXECUTION_FINISHED

@@ -1,0 +1,35 @@
+{
+  "LightningPreviewerPerProject": {
+    "activeApplicationForComponent": {
+      "GitLabStatistics": "Enter a custom url..."
+    },
+    "collapsedBundles": [
+      "GitLabUtilsComponent",
+      "GitLabStatisticsOutput",
+      "ProjectCommitsComponent",
+      "ProjectCommitsApp",
+      "GitLabStatistics",
+      "GitLabUtilsApplication"
+    ],
+    "expandedBundles": [],
+    "customUrls": {},
+    "parameters": {}
+  },
+  "CodeMapPerProject": {
+    "collapsedPanels": [
+      "GitLabUtilsController",
+      "makeCalloutWithAccessTokenMock",
+      "makeCalloutWithAccessTokenTest",
+      "makeCalloutWithAccessTokenMockERROR",
+      "makeCalloutWithAccessTokenMockSUCCESS",
+      "makeCalloutToGetAccessTokenMock",
+      "makeCalloutToGetAccessTokenTest",
+      "GitLabUtils",
+      "makeCalloutToCreateProjectMock",
+      "makeCalloutToCreateProjectTest",
+      "GitLabStatisticsController",
+      "StatisticsWrapper"
+    ]
+  },
+  "SettingsVersion": 1
+}

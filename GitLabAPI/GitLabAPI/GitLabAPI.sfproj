@@ -1,0 +1,1571 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{546c47f8-6a9c-4fc9-a96f-62fce755b25c}</ProjectGuid>
+    <ApexVersion>42.0</ApexVersion>
+    <Name>GitLabAPI</Name>
+    <AssemblyName>GitLabAPI</AssemblyName>
+    <RootNamespace>GitLabAPI</RootNamespace>
+    <ProjectVersion>6</ProjectVersion>
+    <PackageVersion>1.25.1.4</PackageVersion>
+    <SyncOption>False</SyncOption>
+    <AntSupport>True</AntSupport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Folder Include="AnonymousApex" />
+    <Folder Include="aura\" />
+    <Folder Include="aura\GitLabStatisticsOutputApp\" />
+    <Folder Include="aura\GitLabStatisticsOutput\" />
+    <Folder Include="aura\GitLabStatistics\" />
+    <Folder Include="aura\GitLabUtilsApplication\" />
+    <Folder Include="aura\GitLabUtilsComponent\" />
+    <Folder Include="aura\PicklistApp\" />
+    <Folder Include="aura\PicklistComponent\" />
+    <Folder Include="aura\ProjectCommitsApp\" />
+    <Folder Include="aura\ProjectCommitsComponent\" />
+    <Folder Include="aura\ProjectStatisticsApplication\" />
+    <Folder Include="aura\ProjectStatisticsComponent\" />
+    <Folder Include="classes\" />
+    <Folder Include="components\" />
+    <Folder Include="objects\" />
+    <Folder Include="pages\" />
+    <Folder Include="Soql" />
+    <Folder Include="staticresources\" />
+    <Folder Include="staticresources\ExerciseFiles\" />
+    <Folder Include="staticresources\ExerciseFiles\Exercise Files\" />
+    <Folder Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\" />
+    <Folder Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\" />
+    <Folder Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\" />
+    <Folder Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\" />
+    <Folder Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\" />
+    <Folder Include="staticresources\ExerciseFiles\__MACOSX\" />
+    <Folder Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\" />
+    <Folder Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-chan-map\" />
+    <Folder Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\" />
+    <Folder Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\" />
+    <Folder Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\" />
+    <Folder Include="staticresources\SiteSamples\" />
+    <Folder Include="staticresources\SiteSamples\img\" />
+    <Folder Include="triggers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="aura\GitLabStatisticsOutputApp\GitLabStatisticsOutputApp.app">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabStatisticsOutputApp\GitLabStatisticsOutputApp.app</PhysicalRelativePath>
+      <BundleName>GitLabStatisticsOutputApp</BundleName>
+      <LightningType>Application</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\GitLabStatisticsOutput\GitLabStatisticsOutput.cmp">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabStatisticsOutput\GitLabStatisticsOutput.cmp</PhysicalRelativePath>
+      <BundleName>GitLabStatisticsOutput</BundleName>
+      <LightningType>Component</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\GitLabStatisticsOutput\GitLabStatisticsOutputController.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabStatisticsOutput\GitLabStatisticsOutputController.js</PhysicalRelativePath>
+      <BundleName>GitLabStatisticsOutput</BundleName>
+      <LightningType>Controller</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\GitLabStatisticsOutput\GitLabStatisticsOutputHelper.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabStatisticsOutput\GitLabStatisticsOutputHelper.js</PhysicalRelativePath>
+      <BundleName>GitLabStatisticsOutput</BundleName>
+      <LightningType>Helper</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\GitLabStatistics\GitLabStatistics.cmp">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabStatistics\GitLabStatistics.cmp</PhysicalRelativePath>
+      <BundleName>GitLabStatistics</BundleName>
+      <LightningType>Component</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\GitLabStatistics\GitLabStatistics.css">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabStatistics\GitLabStatistics.css</PhysicalRelativePath>
+      <BundleName>GitLabStatistics</BundleName>
+      <LightningType>Style</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\GitLabStatistics\GitLabStatisticsController.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabStatistics\GitLabStatisticsController.js</PhysicalRelativePath>
+      <BundleName>GitLabStatistics</BundleName>
+      <LightningType>Controller</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\GitLabStatistics\GitLabStatisticsHelper.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabStatistics\GitLabStatisticsHelper.js</PhysicalRelativePath>
+      <BundleName>GitLabStatistics</BundleName>
+      <LightningType>Helper</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\GitLabUtilsApplication\GitLabUtilsApplication.app">
+      <PhysicalRelativePath>src\aura\GitLabUtilsApplication\GitLabUtilsApplication.app</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>GitLabUtilsApplication</BundleName>
+      <LightningType>Application</LightningType>
+    </Compile>
+    <Compile Include="aura\GitLabUtilsComponent\GitLabUtilsComponent.cmp">
+      <PhysicalRelativePath>src\aura\GitLabUtilsComponent\GitLabUtilsComponent.cmp</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>GitLabUtilsComponent</BundleName>
+      <LightningType>Component</LightningType>
+    </Compile>
+    <Compile Include="aura\GitLabUtilsComponent\GitLabUtilsComponent.css">
+      <PhysicalRelativePath>src\aura\GitLabUtilsComponent\GitLabUtilsComponent.css</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>GitLabUtilsComponent</BundleName>
+      <LightningType>Style</LightningType>
+    </Compile>
+    <Compile Include="aura\GitLabUtilsComponent\GitLabUtilsComponentController.js">
+      <PhysicalRelativePath>src\aura\GitLabUtilsComponent\GitLabUtilsComponentController.js</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>GitLabUtilsComponent</BundleName>
+      <LightningType>Controller</LightningType>
+    </Compile>
+    <Compile Include="aura\GitLabUtilsComponent\GitLabUtilsComponentHelper.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\GitLabUtilsComponent\GitLabUtilsComponentHelper.js</PhysicalRelativePath>
+      <BundleName>GitLabUtilsComponent</BundleName>
+      <LightningType>Helper</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\PicklistApp\PicklistApp.app">
+      <PhysicalRelativePath>src\aura\PicklistApp\PicklistApp.app</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>PicklistApp</BundleName>
+      <LightningType>Application</LightningType>
+    </Compile>
+    <Compile Include="aura\PicklistApp\PicklistAppHelper.js">
+      <PhysicalRelativePath>src\aura\PicklistApp\PicklistAppHelper.js</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>PicklistApp</BundleName>
+      <LightningType>Helper</LightningType>
+    </Compile>
+    <Compile Include="aura\PicklistComponent\PicklistComponent.cmp">
+      <PhysicalRelativePath>src\aura\PicklistComponent\PicklistComponent.cmp</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>PicklistComponent</BundleName>
+      <LightningType>Component</LightningType>
+    </Compile>
+    <Compile Include="aura\PicklistComponent\PicklistComponent.css">
+      <PhysicalRelativePath>src\aura\PicklistComponent\PicklistComponent.css</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>PicklistComponent</BundleName>
+      <LightningType>Style</LightningType>
+    </Compile>
+    <Compile Include="aura\PicklistComponent\PicklistComponentController.js">
+      <PhysicalRelativePath>src\aura\PicklistComponent\PicklistComponentController.js</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>PicklistComponent</BundleName>
+      <LightningType>Controller</LightningType>
+    </Compile>
+    <Compile Include="aura\PicklistComponent\PicklistComponentHelper.js">
+      <PhysicalRelativePath>src\aura\PicklistComponent\PicklistComponentHelper.js</PhysicalRelativePath>
+      <SubType>AuraDefinitionBundle</SubType>
+      <BundleName>PicklistComponent</BundleName>
+      <LightningType>Helper</LightningType>
+    </Compile>
+    <Compile Include="aura\ProjectCommitsApp\ProjectCommitsApp.app">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectCommitsApp\ProjectCommitsApp.app</PhysicalRelativePath>
+      <BundleName>ProjectCommitsApp</BundleName>
+      <LightningType>Application</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\ProjectCommitsComponent\ProjectCommitsComponent.cmp">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectCommitsComponent\ProjectCommitsComponent.cmp</PhysicalRelativePath>
+      <BundleName>ProjectCommitsComponent</BundleName>
+      <LightningType>Component</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\ProjectCommitsComponent\ProjectCommitsComponent.css">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectCommitsComponent\ProjectCommitsComponent.css</PhysicalRelativePath>
+      <BundleName>ProjectCommitsComponent</BundleName>
+      <LightningType>Style</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\ProjectCommitsComponent\ProjectCommitsComponentController.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectCommitsComponent\ProjectCommitsComponentController.js</PhysicalRelativePath>
+      <BundleName>ProjectCommitsComponent</BundleName>
+      <LightningType>Controller</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\ProjectCommitsComponent\ProjectCommitsComponentHelper.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectCommitsComponent\ProjectCommitsComponentHelper.js</PhysicalRelativePath>
+      <BundleName>ProjectCommitsComponent</BundleName>
+      <LightningType>Helper</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\ProjectStatisticsComponent\ProjectStatisticsComponent.cmp">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectStatisticsComponent\ProjectStatisticsComponent.cmp</PhysicalRelativePath>
+      <BundleName>ProjectStatisticsComponent</BundleName>
+      <LightningType>Component</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\ProjectStatisticsComponent\ProjectStatisticsComponent.css">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectStatisticsComponent\ProjectStatisticsComponent.css</PhysicalRelativePath>
+      <BundleName>ProjectStatisticsComponent</BundleName>
+      <LightningType>Style</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\ProjectStatisticsComponent\ProjectStatisticsComponentController.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectStatisticsComponent\ProjectStatisticsComponentController.js</PhysicalRelativePath>
+      <BundleName>ProjectStatisticsComponent</BundleName>
+      <LightningType>Controller</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="aura\ProjectStatisticsComponent\ProjectStatisticsComponentHelper.js">
+      <SubType>AuraDefinitionBundle</SubType>
+      <PhysicalRelativePath>src\aura\ProjectStatisticsComponent\ProjectStatisticsComponentHelper.js</PhysicalRelativePath>
+      <BundleName>ProjectStatisticsComponent</BundleName>
+      <LightningType>Helper</LightningType>
+      <MetadataType>AuraDefinitionBundle</MetadataType>
+    </Compile>
+    <Compile Include="classes\ApplicationController.cls">
+      <PhysicalRelativePath>src\classes\ApplicationController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ChangePasswordController.cls">
+      <PhysicalRelativePath>src\classes\ChangePasswordController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ChangePasswordControllerTest.cls">
+      <PhysicalRelativePath>src\classes\ChangePasswordControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\CommitsMocks.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\CommitsMocks.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\CommitsWrapper.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\CommitsWrapper.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\ControllerTestClass.cls">
+      <PhysicalRelativePath>src\classes\ControllerTestClass.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\DreamHouseSampleDataController.cls">
+      <PhysicalRelativePath>src\classes\DreamHouseSampleDataController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\DreamHouseSampleDataControllerTest.cls">
+      <PhysicalRelativePath>src\classes\DreamHouseSampleDataControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ForgotPasswordController.cls">
+      <PhysicalRelativePath>src\classes\ForgotPasswordController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ForgotPasswordControllerTest.cls">
+      <PhysicalRelativePath>src\classes\ForgotPasswordControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\GitLabStatisticsController.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\GitLabStatisticsController.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\GitLabStatisticsOutputController.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\GitLabStatisticsOutputController.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\GitLabUtils.cls">
+      <PhysicalRelativePath>src\classes\GitLabUtils.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\GitLabUtilsController.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\GitLabUtilsController.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\Goods_Table_Controller.cls">
+      <PhysicalRelativePath>src\classes\Goods_Table_Controller.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\JSONclass.cls">
+      <PhysicalRelativePath>src\classes\JSONclass.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\makeCalloutToCreateProjectMockERROR.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToCreateProjectMockERROR.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\makeCalloutToCreateProjectMockSUCCESS.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToCreateProjectMockSUCCESS.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\makeCalloutToCreateProjectTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToCreateProjectTest.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\makeCalloutToGetAccessTokenMock.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToGetAccessTokenMock.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\makeCalloutToGetAccessTokenTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToGetAccessTokenTest.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\makeCalloutWithAccessTokenMockERROR.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutWithAccessTokenMockERROR.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\makeCalloutWithAccessTokenMockSUCCESS.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutWithAccessTokenMockSUCCESS.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\makeCalloutWithAccessTokenTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutWithAccessTokenTest.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\MyProfilePageController.cls">
+      <PhysicalRelativePath>src\classes\MyProfilePageController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\MyProfilePageControllerTest.cls">
+      <PhysicalRelativePath>src\classes\MyProfilePageControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\ProjectStatisticController.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\ProjectStatisticController.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\RestAPIClassTest.cls">
+      <PhysicalRelativePath>src\classes\RestAPIClassTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SiteLoginController.cls">
+      <PhysicalRelativePath>src\classes\SiteLoginController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SiteLoginControllerTest.cls">
+      <PhysicalRelativePath>src\classes\SiteLoginControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SiteRegisterController.cls">
+      <PhysicalRelativePath>src\classes\SiteRegisterController.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SiteRegisterControllerTest.cls">
+      <PhysicalRelativePath>src\classes\SiteRegisterControllerTest.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\SmartWorkSpace.cls">
+      <PhysicalRelativePath>src\classes\SmartWorkSpace.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\StatisticsWrapper.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\StatisticsWrapper.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\Test_Class.cls">
+      <PhysicalRelativePath>src\classes\Test_Class.cls</PhysicalRelativePath>
+      <SubType>Class</SubType>
+    </Compile>
+    <Compile Include="classes\WorkWithCommitsMock.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\WorkWithCommitsMock.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\WorkWithCommitsTest.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\WorkWithCommitsTest.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\WorkWithEmptyCommitsMock.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\WorkWithEmptyCommitsMock.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="classes\WorkWithProjectMock.cls">
+      <SubType>Class</SubType>
+      <PhysicalRelativePath>src\classes\WorkWithProjectMock.cls</PhysicalRelativePath>
+      <MetadataType>ApexClass</MetadataType>
+    </Compile>
+    <Compile Include="components\SiteFooter.component">
+      <PhysicalRelativePath>src\components\SiteFooter.component</PhysicalRelativePath>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="components\SiteHeader.component">
+      <PhysicalRelativePath>src\components\SiteHeader.component</PhysicalRelativePath>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="components\SiteLogin.component">
+      <PhysicalRelativePath>src\components\SiteLogin.component</PhysicalRelativePath>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="components\SitePoweredBy.component">
+      <PhysicalRelativePath>src\components\SitePoweredBy.component</PhysicalRelativePath>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="pages\AnswersHome.page">
+      <PhysicalRelativePath>src\pages\AnswersHome.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\BandwidthExceeded.page">
+      <PhysicalRelativePath>src\pages\BandwidthExceeded.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\ChangePassword.page">
+      <PhysicalRelativePath>src\pages\ChangePassword.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\DreamHouseSampleData.page">
+      <PhysicalRelativePath>src\pages\DreamHouseSampleData.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\Exception.page">
+      <PhysicalRelativePath>src\pages\Exception.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\FileNotFound.page">
+      <PhysicalRelativePath>src\pages\FileNotFound.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\ForgotPassword.page">
+      <PhysicalRelativePath>src\pages\ForgotPassword.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\ForgotPasswordConfirm.page">
+      <PhysicalRelativePath>src\pages\ForgotPasswordConfirm.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\Goods_Table.page">
+      <PhysicalRelativePath>src\pages\Goods_Table.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\IdeasHome.page">
+      <PhysicalRelativePath>src\pages\IdeasHome.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\InMaintenance.page">
+      <PhysicalRelativePath>src\pages\InMaintenance.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\MyProfilePage.page">
+      <PhysicalRelativePath>src\pages\MyProfilePage.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\SiteLogin.page">
+      <PhysicalRelativePath>src\pages\SiteLogin.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\SiteRegister.page">
+      <PhysicalRelativePath>src\pages\SiteRegister.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\SiteRegisterConfirm.page">
+      <PhysicalRelativePath>src\pages\SiteRegisterConfirm.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\SiteTemplate.page">
+      <PhysicalRelativePath>src\pages\SiteTemplate.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\StdExceptionTemplate.page">
+      <PhysicalRelativePath>src\pages\StdExceptionTemplate.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\Unauthorized.page">
+      <PhysicalRelativePath>src\pages\Unauthorized.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="pages\UnderConstruction.page">
+      <PhysicalRelativePath>src\pages\UnderConstruction.page</PhysicalRelativePath>
+      <SubType>Page</SubType>
+    </Compile>
+    <Compile Include="triggers\CheckBoxRule.trigger">
+      <PhysicalRelativePath>src\triggers\CheckBoxRule.trigger</PhysicalRelativePath>
+      <SubType>Trigger</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Object Include="objects\Account.object">
+      <PhysicalRelativePath>src\objects\Account.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AccountCleanInfo.object">
+      <PhysicalRelativePath>src\objects\AccountCleanInfo.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AccountContactRole.object">
+      <PhysicalRelativePath>src\objects\AccountContactRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ActiveScratchOrg.object">
+      <PhysicalRelativePath>src\objects\ActiveScratchOrg.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Activity.object">
+      <PhysicalRelativePath>src\objects\Activity.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Asset.object">
+      <PhysicalRelativePath>src\objects\Asset.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AssetRelationship.object">
+      <PhysicalRelativePath>src\objects\AssetRelationship.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\AssistantProgress.object">
+      <PhysicalRelativePath>src\objects\AssistantProgress.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Broker__c.object">
+      <PhysicalRelativePath>src\objects\Broker__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Campaign.object">
+      <PhysicalRelativePath>src\objects\Campaign.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CampaignMember.object">
+      <PhysicalRelativePath>src\objects\CampaignMember.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Case.object">
+      <PhysicalRelativePath>src\objects\Case.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CaseContactRole.object">
+      <PhysicalRelativePath>src\objects\CaseContactRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ChatterActivity.object">
+      <PhysicalRelativePath>src\objects\ChatterActivity.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CollaborationGroup.object">
+      <PhysicalRelativePath>src\objects\CollaborationGroup.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\CollaborationGroupMember.object">
+      <PhysicalRelativePath>src\objects\CollaborationGroupMember.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Contact.object">
+      <PhysicalRelativePath>src\objects\Contact.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContactCleanInfo.object">
+      <PhysicalRelativePath>src\objects\ContactCleanInfo.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContactRequest.object">
+      <SubType>Object</SubType>
+      <PhysicalRelativePath>src\objects\ContactRequest.object</PhysicalRelativePath>
+      <MetadataType>CustomObject</MetadataType>
+    </Object>
+    <Object Include="objects\ContentVersion.object">
+      <PhysicalRelativePath>src\objects\ContentVersion.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Contract.object">
+      <PhysicalRelativePath>src\objects\Contract.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ContractContactRole.object">
+      <PhysicalRelativePath>src\objects\ContractContactRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\DandBCompany.object">
+      <PhysicalRelativePath>src\objects\DandBCompany.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\DuplicateRecordItem.object">
+      <PhysicalRelativePath>src\objects\DuplicateRecordItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\DuplicateRecordSet.object">
+      <PhysicalRelativePath>src\objects\DuplicateRecordSet.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\EmailMessage.object">
+      <PhysicalRelativePath>src\objects\EmailMessage.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Event.object">
+      <PhysicalRelativePath>src\objects\Event.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ExchangeUserMapping.object">
+      <PhysicalRelativePath>src\objects\ExchangeUserMapping.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\FeedItem.object">
+      <PhysicalRelativePath>src\objects\FeedItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ForecastingCategoryMapping.object">
+      <PhysicalRelativePath>src\objects\ForecastingCategoryMapping.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\GitLabApp__c.object">
+      <PhysicalRelativePath>src\objects\GitLabApp__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Goods__c.object">
+      <PhysicalRelativePath>src\objects\Goods__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Idea.object">
+      <PhysicalRelativePath>src\objects\Idea.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Image.object">
+      <SubType>Object</SubType>
+      <PhysicalRelativePath>src\objects\Image.object</PhysicalRelativePath>
+      <MetadataType>CustomObject</MetadataType>
+    </Object>
+    <Object Include="objects\Lead.object">
+      <PhysicalRelativePath>src\objects\Lead.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\LeadCleanInfo.object">
+      <PhysicalRelativePath>src\objects\LeadCleanInfo.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Macro.object">
+      <PhysicalRelativePath>src\objects\Macro.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\MacroAction.object">
+      <PhysicalRelativePath>src\objects\MacroAction.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\MacroInstruction.object">
+      <PhysicalRelativePath>src\objects\MacroInstruction.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\NamespaceRegistry.object">
+      <PhysicalRelativePath>src\objects\NamespaceRegistry.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Opportunity.object">
+      <PhysicalRelativePath>src\objects\Opportunity.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OpportunityCompetitor.object">
+      <PhysicalRelativePath>src\objects\OpportunityCompetitor.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OpportunityContactRole.object">
+      <PhysicalRelativePath>src\objects\OpportunityContactRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OpportunityLineItem.object">
+      <PhysicalRelativePath>src\objects\OpportunityLineItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Order.object">
+      <PhysicalRelativePath>src\objects\Order.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OrderItem.object">
+      <PhysicalRelativePath>src\objects\OrderItem.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\OrgDeleteRequest.object">
+      <PhysicalRelativePath>src\objects\OrgDeleteRequest.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PartnerRole.object">
+      <PhysicalRelativePath>src\objects\PartnerRole.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Pricebook2.object">
+      <PhysicalRelativePath>src\objects\Pricebook2.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\PricebookEntry.object">
+      <PhysicalRelativePath>src\objects\PricebookEntry.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Product2.object">
+      <PhysicalRelativePath>src\objects\Product2.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Property__c.object">
+      <PhysicalRelativePath>src\objects\Property__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\QuickText.object">
+      <PhysicalRelativePath>src\objects\QuickText.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Recommendation.object">
+      <SubType>Object</SubType>
+      <PhysicalRelativePath>src\objects\Recommendation.object</PhysicalRelativePath>
+      <MetadataType>CustomObject</MetadataType>
+    </Object>
+    <Object Include="objects\RecordAction.object">
+      <PhysicalRelativePath>src\objects\RecordAction.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\RequestsForAccessSIQ.object">
+      <PhysicalRelativePath>src\objects\RequestsForAccessSIQ.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Scorecard.object">
+      <PhysicalRelativePath>src\objects\Scorecard.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ScorecardAssociation.object">
+      <PhysicalRelativePath>src\objects\ScorecardAssociation.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ScorecardMetric.object">
+      <PhysicalRelativePath>src\objects\ScorecardMetric.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\ScratchOrgInfo.object">
+      <PhysicalRelativePath>src\objects\ScratchOrgInfo.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Sensor_Event__c.object">
+      <PhysicalRelativePath>src\objects\Sensor_Event__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Sensor__c.object">
+      <PhysicalRelativePath>src\objects\Sensor__c.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Site.object">
+      <PhysicalRelativePath>src\objects\Site.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\SocialPersona.object">
+      <PhysicalRelativePath>src\objects\SocialPersona.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Solution.object">
+      <PhysicalRelativePath>src\objects\Solution.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\StreamActivityAccess.object">
+      <PhysicalRelativePath>src\objects\StreamActivityAccess.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\StreamingChannel.object">
+      <PhysicalRelativePath>src\objects\StreamingChannel.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Task.object">
+      <PhysicalRelativePath>src\objects\Task.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\Topic.object">
+      <PhysicalRelativePath>src\objects\Topic.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\TopicAssignment.object">
+      <PhysicalRelativePath>src\objects\TopicAssignment.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\User.object">
+      <PhysicalRelativePath>src\objects\User.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+    <Object Include="objects\UserProvisioningRequest.object">
+      <PhysicalRelativePath>src\objects\UserProvisioningRequest.object</PhysicalRelativePath>
+      <SubType>Object</SubType>
+    </Object>
+  </ItemGroup>
+  <ItemGroup>
+    <StaticZip Include="staticresources\ExerciseFiles">
+      <SubType>StaticResourceZip</SubType>
+    </StaticZip>
+    <StaticZip Include="staticresources\SiteSamples">
+      <SubType>StaticResourceZip</SubType>
+    </StaticZip>
+  </ItemGroup>
+  <ItemGroup>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-chan-map\.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-chan-map\.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.cmp">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.cmp</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.cmp</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.cmp-meta.xml">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.cmp-meta.xml</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.cmp-meta.xml</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.css">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.css</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.css</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.design">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.design</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMap.design</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMapController.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMapController.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMapController.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMapHelper.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMapHelper.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-chan-map\RecordMap\RecordMapHelper.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.cmp">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.cmp</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.cmp</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.cmp-meta.xml">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.cmp-meta.xml</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.cmp-meta.xml</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.css">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.css</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarousel.css</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselController.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselController.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselController.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselHelper.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselHelper.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselHelper.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselRenderer.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselRenderer.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureCarousel\PictureCarouselRenderer.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.cmp">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.cmp</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.cmp</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.cmp-meta.xml">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.cmp-meta.xml</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.cmp-meta.xml</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.css">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.css</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.css</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.design">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.design</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.design</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.svg">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.svg</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCard.svg</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCardController.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCardController.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\Exercise Files\feature-maria-gallery\PictureGalleryCard\PictureGalleryCardController.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\._Exercise Files">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\._Exercise Files</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\._Exercise Files</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\._.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\._.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\._.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\._feature-maria-gallery">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\._feature-maria-gallery</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\._feature-maria-gallery</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-chan-map\._.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-chan-map\._.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-chan-map\._.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-chan-map\._RecordMap">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-chan-map\._RecordMap</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-chan-map\._RecordMap</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._PictureCarousel">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._PictureCarousel</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._PictureCarousel</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._PictureGalleryCard">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._PictureGalleryCard</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\._PictureGalleryCard</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.cmp">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.cmp</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.cmp</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.cmp-meta.xml">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.cmp-meta.xml</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.cmp-meta.xml</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.css">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.css</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarousel.css</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselController.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselController.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselController.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselHelper.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselHelper.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselHelper.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselRenderer.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselRenderer.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureCarousel\._PictureCarouselRenderer.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._.DS_Store">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._.DS_Store</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._.DS_Store</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.cmp">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.cmp</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.cmp</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.cmp-meta.xml">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.cmp-meta.xml</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.cmp-meta.xml</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.css">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.css</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.css</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.design">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.design</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.design</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.svg">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.svg</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCard.svg</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCardController.js">
+      <PhysicalRelativePath>resource-bundles\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCardController.js</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>ExerciseFiles</StaticResource>
+      <StaticResourcePath>staticresources\ExerciseFiles\__MACOSX\Exercise Files\feature-maria-gallery\PictureGalleryCard\._PictureGalleryCardController.js</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\clock.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\clock.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\clock.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\construction.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\construction.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\construction.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\force_logo.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\force_logo.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\force_logo.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\maintenance.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\maintenance.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\maintenance.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\poweredby.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\poweredby.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\poweredby.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\tools.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\tools.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\tools.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\unauthorized.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\unauthorized.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\unauthorized.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\img\warning.png">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\img\warning.png</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\img\warning.png</StaticResourcePath>
+    </StaticZipItem>
+    <StaticZipItem Include="staticresources\SiteSamples\SiteStyles.css">
+      <PhysicalRelativePath>resource-bundles\SiteSamples\SiteStyles.css</PhysicalRelativePath>
+      <SubType>StaticResourceZipItem</SubType>
+      <StaticResource>SiteSamples</StaticResource>
+      <StaticResourcePath>staticresources\SiteSamples\SiteStyles.css</StaticResourcePath>
+    </StaticZipItem>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="classes\ApplicationController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ApplicationController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ApplicationController.cls</DependentUpon>
+    </None>
+    <None Include="classes\ChangePasswordController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ChangePasswordController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ChangePasswordController.cls</DependentUpon>
+    </None>
+    <None Include="classes\ChangePasswordControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ChangePasswordControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ChangePasswordControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\CommitsMocks.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\CommitsMocks.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\CommitsMocks.cls</DependentUpon>
+    </None>
+    <None Include="classes\CommitsWrapper.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\CommitsWrapper.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\CommitsWrapper.cls</DependentUpon>
+    </None>
+    <None Include="classes\ControllerTestClass.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ControllerTestClass.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ControllerTestClass.cls</DependentUpon>
+    </None>
+    <None Include="classes\DreamHouseSampleDataController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\DreamHouseSampleDataController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\DreamHouseSampleDataController.cls</DependentUpon>
+    </None>
+    <None Include="classes\DreamHouseSampleDataControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\DreamHouseSampleDataControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\DreamHouseSampleDataControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\ForgotPasswordController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ForgotPasswordController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ForgotPasswordController.cls</DependentUpon>
+    </None>
+    <None Include="classes\ForgotPasswordControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\ForgotPasswordControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\ForgotPasswordControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\GitLabStatisticsController.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\GitLabStatisticsController.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\GitLabStatisticsController.cls</DependentUpon>
+    </None>
+    <None Include="classes\GitLabStatisticsOutputController.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\GitLabStatisticsOutputController.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\GitLabStatisticsOutputController.cls</DependentUpon>
+    </None>
+    <None Include="classes\GitLabUtils.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\GitLabUtils.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\GitLabUtils.cls</DependentUpon>
+    </None>
+    <None Include="classes\GitLabUtilsController.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\GitLabUtilsController.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\GitLabUtilsController.cls</DependentUpon>
+    </None>
+    <None Include="classes\Goods_Table_Controller.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\Goods_Table_Controller.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\Goods_Table_Controller.cls</DependentUpon>
+    </None>
+    <None Include="classes\JSONclass.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\JSONclass.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\JSONclass.cls</DependentUpon>
+    </None>
+    <None Include="classes\makeCalloutToCreateProjectMockERROR.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToCreateProjectMockERROR.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\makeCalloutToCreateProjectMockERROR.cls</DependentUpon>
+    </None>
+    <None Include="classes\makeCalloutToCreateProjectMockSUCCESS.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToCreateProjectMockSUCCESS.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\makeCalloutToCreateProjectMockSUCCESS.cls</DependentUpon>
+    </None>
+    <None Include="classes\makeCalloutToCreateProjectTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToCreateProjectTest.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\makeCalloutToCreateProjectTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\makeCalloutToGetAccessTokenMock.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToGetAccessTokenMock.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\makeCalloutToGetAccessTokenMock.cls</DependentUpon>
+    </None>
+    <None Include="classes\makeCalloutToGetAccessTokenTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutToGetAccessTokenTest.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\makeCalloutToGetAccessTokenTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\makeCalloutWithAccessTokenMockERROR.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutWithAccessTokenMockERROR.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\makeCalloutWithAccessTokenMockERROR.cls</DependentUpon>
+    </None>
+    <None Include="classes\makeCalloutWithAccessTokenMockSUCCESS.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutWithAccessTokenMockSUCCESS.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\makeCalloutWithAccessTokenMockSUCCESS.cls</DependentUpon>
+    </None>
+    <None Include="classes\makeCalloutWithAccessTokenTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\makeCalloutWithAccessTokenTest.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\makeCalloutWithAccessTokenTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\MyProfilePageController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\MyProfilePageController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\MyProfilePageController.cls</DependentUpon>
+    </None>
+    <None Include="classes\MyProfilePageControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\MyProfilePageControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\MyProfilePageControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\ProjectStatisticController.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\ProjectStatisticController.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\ProjectStatisticController.cls</DependentUpon>
+    </None>
+    <None Include="classes\RestAPIClassTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\RestAPIClassTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\RestAPIClassTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\SiteLoginController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SiteLoginController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SiteLoginController.cls</DependentUpon>
+    </None>
+    <None Include="classes\SiteLoginControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SiteLoginControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SiteLoginControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\SiteRegisterController.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SiteRegisterController.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SiteRegisterController.cls</DependentUpon>
+    </None>
+    <None Include="classes\SiteRegisterControllerTest.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SiteRegisterControllerTest.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SiteRegisterControllerTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\SmartWorkSpace.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\SmartWorkSpace.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\SmartWorkSpace.cls</DependentUpon>
+    </None>
+    <None Include="classes\StatisticsWrapper.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\StatisticsWrapper.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\StatisticsWrapper.cls</DependentUpon>
+    </None>
+    <None Include="classes\Test_Class.cls-meta.xml">
+      <PhysicalRelativePath>src\classes\Test_Class.cls-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>classes\Test_Class.cls</DependentUpon>
+    </None>
+    <None Include="classes\WorkWithCommitsMock.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\WorkWithCommitsMock.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\WorkWithCommitsMock.cls</DependentUpon>
+    </None>
+    <None Include="classes\WorkWithCommitsTest.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\WorkWithCommitsTest.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\WorkWithCommitsTest.cls</DependentUpon>
+    </None>
+    <None Include="classes\WorkWithEmptyCommitsMock.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\WorkWithEmptyCommitsMock.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\WorkWithEmptyCommitsMock.cls</DependentUpon>
+    </None>
+    <None Include="classes\WorkWithProjectMock.cls-meta.xml">
+      <SubType>Metadata</SubType>
+      <PhysicalRelativePath>src\classes\WorkWithProjectMock.cls-meta.xml</PhysicalRelativePath>
+      <MetadataType>Metadata</MetadataType>
+      <DependentUpon>classes\WorkWithProjectMock.cls</DependentUpon>
+    </None>
+    <None Include="components\SiteFooter.component-meta.xml">
+      <PhysicalRelativePath>src\components\SiteFooter.component-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>components\SiteFooter.component</DependentUpon>
+    </None>
+    <None Include="components\SiteHeader.component-meta.xml">
+      <PhysicalRelativePath>src\components\SiteHeader.component-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>components\SiteHeader.component</DependentUpon>
+    </None>
+    <None Include="components\SiteLogin.component-meta.xml">
+      <PhysicalRelativePath>src\components\SiteLogin.component-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>components\SiteLogin.component</DependentUpon>
+    </None>
+    <None Include="components\SitePoweredBy.component-meta.xml">
+      <PhysicalRelativePath>src\components\SitePoweredBy.component-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>components\SitePoweredBy.component</DependentUpon>
+    </None>
+    <None Include="pages\AnswersHome.page-meta.xml">
+      <PhysicalRelativePath>src\pages\AnswersHome.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\AnswersHome.page</DependentUpon>
+    </None>
+    <None Include="pages\BandwidthExceeded.page-meta.xml">
+      <PhysicalRelativePath>src\pages\BandwidthExceeded.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\BandwidthExceeded.page</DependentUpon>
+    </None>
+    <None Include="pages\ChangePassword.page-meta.xml">
+      <PhysicalRelativePath>src\pages\ChangePassword.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\ChangePassword.page</DependentUpon>
+    </None>
+    <None Include="pages\DreamHouseSampleData.page-meta.xml">
+      <PhysicalRelativePath>src\pages\DreamHouseSampleData.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\DreamHouseSampleData.page</DependentUpon>
+    </None>
+    <None Include="pages\Exception.page-meta.xml">
+      <PhysicalRelativePath>src\pages\Exception.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\Exception.page</DependentUpon>
+    </None>
+    <None Include="pages\FileNotFound.page-meta.xml">
+      <PhysicalRelativePath>src\pages\FileNotFound.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\FileNotFound.page</DependentUpon>
+    </None>
+    <None Include="pages\ForgotPassword.page-meta.xml">
+      <PhysicalRelativePath>src\pages\ForgotPassword.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\ForgotPassword.page</DependentUpon>
+    </None>
+    <None Include="pages\ForgotPasswordConfirm.page-meta.xml">
+      <PhysicalRelativePath>src\pages\ForgotPasswordConfirm.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\ForgotPasswordConfirm.page</DependentUpon>
+    </None>
+    <None Include="pages\Goods_Table.page-meta.xml">
+      <PhysicalRelativePath>src\pages\Goods_Table.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\Goods_Table.page</DependentUpon>
+    </None>
+    <None Include="pages\IdeasHome.page-meta.xml">
+      <PhysicalRelativePath>src\pages\IdeasHome.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\IdeasHome.page</DependentUpon>
+    </None>
+    <None Include="pages\InMaintenance.page-meta.xml">
+      <PhysicalRelativePath>src\pages\InMaintenance.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\InMaintenance.page</DependentUpon>
+    </None>
+    <None Include="pages\MyProfilePage.page-meta.xml">
+      <PhysicalRelativePath>src\pages\MyProfilePage.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\MyProfilePage.page</DependentUpon>
+    </None>
+    <None Include="pages\SiteLogin.page-meta.xml">
+      <PhysicalRelativePath>src\pages\SiteLogin.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\SiteLogin.page</DependentUpon>
+    </None>
+    <None Include="pages\SiteRegister.page-meta.xml">
+      <PhysicalRelativePath>src\pages\SiteRegister.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\SiteRegister.page</DependentUpon>
+    </None>
+    <None Include="pages\SiteRegisterConfirm.page-meta.xml">
+      <PhysicalRelativePath>src\pages\SiteRegisterConfirm.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\SiteRegisterConfirm.page</DependentUpon>
+    </None>
+    <None Include="pages\SiteTemplate.page-meta.xml">
+      <PhysicalRelativePath>src\pages\SiteTemplate.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\SiteTemplate.page</DependentUpon>
+    </None>
+    <None Include="pages\StdExceptionTemplate.page-meta.xml">
+      <PhysicalRelativePath>src\pages\StdExceptionTemplate.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\StdExceptionTemplate.page</DependentUpon>
+    </None>
+    <None Include="pages\Unauthorized.page-meta.xml">
+      <PhysicalRelativePath>src\pages\Unauthorized.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\Unauthorized.page</DependentUpon>
+    </None>
+    <None Include="pages\UnderConstruction.page-meta.xml">
+      <PhysicalRelativePath>src\pages\UnderConstruction.page-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>pages\UnderConstruction.page</DependentUpon>
+    </None>
+    <None Include="triggers\CheckBoxRule.trigger-meta.xml">
+      <PhysicalRelativePath>src\triggers\CheckBoxRule.trigger-meta.xml</PhysicalRelativePath>
+      <SubType>Metadata</SubType>
+      <PackageName>
+      </PackageName>
+      <DependentUpon>triggers\CheckBoxRule.trigger</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <AnonymousApex Include="AnonymousApex\AnonymousApex1.anonymous">
+      <SubType>AnonymousApex</SubType>
+      <PhysicalRelativePath>AnonymousApex\AnonymousApex1.anonymous</PhysicalRelativePath>
+    </AnonymousApex>
+  </ItemGroup>
+</Project>

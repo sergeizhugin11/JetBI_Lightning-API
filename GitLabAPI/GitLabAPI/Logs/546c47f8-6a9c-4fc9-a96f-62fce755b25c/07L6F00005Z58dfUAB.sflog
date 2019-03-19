@@ -1,0 +1,29 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetNumberOfProj();
+04:17:40.1 (1216092)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+04:17:40.1 (1235797)|EXECUTION_STARTED
+04:17:40.1 (1239568)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+04:17:40.1 (1668165)|SYSTEM_MODE_ENTER|false
+04:17:40.1 (15692615)|CALLOUT_REQUEST|[71]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects/repository/tree, Method=GET]
+04:17:40.1 (562768957)|CALLOUT_RESPONSE|[71]|System.HttpResponse[Status=Not Found, StatusCode=404]
+04:17:40.1 (562889355)|USER_DEBUG|[72]|DEBUG|{"error":"404 Not Found"}
+04:17:40.1 (562973802)|SYSTEM_MODE_EXIT|false
+04:17:40.565 (565662641)|CUMULATIVE_LIMIT_USAGE
+04:17:40.565 (565662641)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+04:17:40.565 (565662641)|CUMULATIVE_LIMIT_USAGE_END
+
+04:17:40.1 (565722036)|CODE_UNIT_FINISHED|execute_anonymous_apex
+04:17:40.1 (566932171)|EXECUTION_FINISHED

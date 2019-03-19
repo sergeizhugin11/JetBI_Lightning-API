@@ -1,0 +1,49 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetCode();
+04:32:11.1 (1324062)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+04:32:11.1 (1361022)|EXECUTION_STARTED
+04:32:11.1 (1368114)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+04:32:11.1 (2148571)|SYSTEM_MODE_ENTER|false
+04:32:11.1 (23097506)|CALLOUT_REQUEST|[34]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/oauth/authorize?client_id=1ff434db62169297767842e2e9f3ca0ffc9941aa96fe9a227f169006ac1e54ad&response_type=code&redirect_uri=https://sergeizhugin-developer-edition.ap4.force.com&state=1234567890, Method=GET]
+04:32:11.1 (649595144)|CALLOUT_RESPONSE|[34]|System.HttpResponse[Status=Found, StatusCode=302]
+04:32:11.1 (649758070)|USER_DEBUG|[35]|DEBUG|https://git-test.jetbi.com/users/sign_in
+04:32:11.1 (649809142)|USER_DEBUG|[36]|DEBUG|System.HttpResponse[Status=Found, StatusCode=302]
+04:32:11.1 (649863631)|USER_DEBUG|[37]|DEBUG|no-cache
+04:32:11.1 (649906844)|USER_DEBUG|[38]|DEBUG|1; mode=block
+04:32:11.1 (649944940)|USER_DEBUG|[39]|DEBUG|keep-alive
+04:32:11.1 (649984881)|USER_DEBUG|[40]|DEBUG|Fri, 08 Feb 2019 12:32:11 GMT
+04:32:11.1 (650207655)|USER_DEBUG|[43]|DEBUG|Server
+04:32:11.1 (650235203)|USER_DEBUG|[43]|DEBUG|X-Request-Id
+04:32:11.1 (650248342)|USER_DEBUG|[43]|DEBUG|X-Runtime
+04:32:11.1 (650258768)|USER_DEBUG|[43]|DEBUG|X-Content-Type-Options
+04:32:11.1 (650269507)|USER_DEBUG|[43]|DEBUG|Connection
+04:32:11.1 (650282000)|USER_DEBUG|[43]|DEBUG|Date
+04:32:11.1 (650292368)|USER_DEBUG|[43]|DEBUG|X-Frame-Options
+04:32:11.1 (650302673)|USER_DEBUG|[43]|DEBUG|Strict-Transport-Security
+04:32:11.1 (650313015)|USER_DEBUG|[43]|DEBUG|Cache-Control
+04:32:11.1 (650324025)|USER_DEBUG|[43]|DEBUG|X-Xss-Protection
+04:32:11.1 (650334689)|USER_DEBUG|[43]|DEBUG|Set-Cookie
+04:32:11.1 (650345433)|USER_DEBUG|[43]|DEBUG|Content-Length
+04:32:11.1 (650364806)|USER_DEBUG|[43]|DEBUG|Location
+04:32:11.1 (650386764)|USER_DEBUG|[43]|DEBUG|Content-Type
+04:32:11.1 (650431883)|USER_DEBUG|[45]|DEBUG|(Server, X-Request-Id, X-Runtime, X-Content-Type-Options, Connection, Date, X-Frame-Options, Strict-Transport-Security, Cache-Control, X-Xss-Protection, ...)
+04:32:11.1 (650463298)|SYSTEM_MODE_EXIT|false
+04:32:11.652 (652794322)|CUMULATIVE_LIMIT_USAGE
+04:32:11.652 (652794322)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+04:32:11.652 (652794322)|CUMULATIVE_LIMIT_USAGE_END
+
+04:32:11.1 (652857522)|CODE_UNIT_FINISHED|execute_anonymous_apex
+04:32:11.1 (653808606)|EXECUTION_FINISHED

@@ -1,0 +1,31 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: System.debug(GitLabUtils.makeCalloutToGetAccessToken('123'));
+07:44:23.1 (1490070)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+07:44:23.1 (1515621)|EXECUTION_STARTED
+07:44:23.1 (1522986)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+07:44:23.1 (2287714)|SYSTEM_MODE_ENTER|false
+07:44:23.1 (20148776)|USER_DEBUG|[58]|DEBUG|client_id=d6804166bcfc563ea34560fa5343310d346bd25385b5111b52c749ab5e155b26&client_secret=eb5dd4f1a9e83f06ea0ab4c3997a9d8659dc07aafe3a239174aa0d592610e1ba&code=219158d5e75b441ddad92786c7b9813cb678b46b7cd68084505c32ed74c87bb5&grant_type=authorization_code&redirect_uri=https://gitlab.com/
+07:44:23.1 (20257188)|CALLOUT_REQUEST|[59]|System.HttpRequest[Endpoint=https://gitlab.com/oauth/token, Method=POST]
+07:44:23.1 (975370819)|CALLOUT_RESPONSE|[59]|System.HttpResponse[Status=Unauthorized, StatusCode=401]
+07:44:23.1 (975507421)|USER_DEBUG|[60]|DEBUG|{"error":"invalid_grant","error_description":"The provided authorization grant is invalid, expired, revoked, does not match the redirection URI used in the authorization request, or was issued to another client."}
+07:44:23.1 (976007849)|SYSTEM_MODE_EXIT|false
+07:44:23.1 (976026922)|USER_DEBUG|[1]|DEBUG|null
+07:44:23.978 (978022274)|CUMULATIVE_LIMIT_USAGE
+07:44:23.978 (978022274)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+07:44:23.978 (978022274)|CUMULATIVE_LIMIT_USAGE_END
+
+07:44:23.1 (978097757)|CODE_UNIT_FINISHED|execute_anonymous_apex
+07:44:23.1 (979172311)|EXECUTION_FINISHED

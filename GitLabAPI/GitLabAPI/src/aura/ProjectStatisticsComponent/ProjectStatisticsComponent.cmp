@@ -1,0 +1,58 @@
+<aura:component controller="ProjectStatisticController">
+	<aura:handler name="init" value="{!this}" action="{!c.outputProjectStatistics}"/>
+	<aura:attribute name="progectName" type="String"/>
+	<aura:attribute name="commitsInf" type="List"/>
+	<aura:attribute name="commitsSort" type="List"/>
+	<aura:attribute name="buttonstate" type="Boolean" default="false"/>
+        
+	<div class="slds-modal__container">
+       
+    	<div class="slds-page-header">
+        	<div class="slds-grid">
+            	<div class="slds-col slds-has-flexi-truncate">
+              		<p class="slds-text-title_caps slds-line-height_reset">Commits</p>
+              		<h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="My Contacts">{!v.progectName}</h1>
+            	</div>
+          	</div>
+		</div> 
+
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+				<thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate">Commit name</div>	
+                        </th>
+						<th scope="col">
+                            <div class="slds-truncate">Create date
+								<lightning:buttonStateful
+									class="buttonStateful"
+									labelWhenOff=""
+									labelWhenOn=""
+									labelWhenHover=""
+									iconNameWhenOff="utility:jump_to_top"
+									iconNameWhenOn="utility:jump_to_bottom"
+									iconNameWhenHover=""
+									state="{! v.buttonstate }"
+									onclick="{!c.Sort}"/>	
+							</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Author name</div>
+                        </th>
+						<th scope="col">
+                            <div class="slds-truncate">Add lines</div>
+                        </th>
+						<th scope="col">
+                            <div class="slds-truncate">Delete lines</div>
+                        </th>
+                    </tr>
+                </thead>
+				<tbody>
+					<aura:iteration items="{!v.commitsInf}" var="item">
+						<tr><td>{!item.commitsName}</td> <td>{!item.createDate}</td> <td>{!item.authorName}</td> <td>{!item.addLines}</td> <td>{!item.delLines}</td></tr>
+					</aura:iteration>
+				</tbody>
+        </table>
+ 		
+    </div>
+</aura:component>

@@ -1,0 +1,71 @@
+public with sharing class GitLabUtils {
+	private static final String APP_ADRESS = GitLabApp__c.getInstance().AppAdress__c;
+
+	private static final String APP_UNIQUE_TOKEN = GitLabApp__c.getInstance().AppUniqueToken__c;
+    
+	private static final String APP_ID = GitLabApp__c.getInstance().AppId__c;
+	private static final String APP_SECRET = GitLabApp__c.getInstance().AppSecret__c;
+	private static final String APP_REDIRECT_ADRESS = GitLabApp__c.getInstance().AppRedirectArdress__c;
+
+	private static final String APP_ACCESS_TOKEN = GitLabApp__c.getInstance().AppAccessToken__c;
+
+	private static final String HEADER_TYPE = 'Content-Type';
+	private static final String HEADER_CHARSET_TYPE = 'application/json;charset=UTF-8';
+
+	private final static String URL_FOR_CREATE_WITH_ACCTOKEN = '/api/v4/projects?private_token=';
+    private final static String URL_FOR_CREATE_WITH_TOKEN = 'https://' + APP_ADRESS + '/api/v4/projects?access_token=';
+ 
+	public static String makeCalloutWithAccessToken(string folderName) {
+        String restReqest = 'https://' + APP_ADRESS + URL_FOR_CREATE_WITH_ACCTOKEN + APP_UNIQUE_TOKEN;
+        String responseStr = '';
+        Http http = new Http();
+        HttpRequest request = new HttpRequest(); 
+        request.setEndpoint(restReqest); 
+        request.setMethod('POST');
+        request.setHeader(HEADER_TYPE, HEADER_CHARSET_TYPE);
+        request.setBody('{"name":"' + folderName + '"}');
+        HttpResponse response = http.send(request);
+        if (response.getStatusCode() != 201) {
+            responseStr += String.valueOf(response.getBody());
+        } else {
+            responseStr += 'SUCCESS';
+        }
+        return responseStr;
+    }      
+
+	public static String makeCalloutToGetAccessToken(String code) {
+        String restReqest = 'https://' + APP_ADRESS + '/oauth/token';
+        String responseStr = '';
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint(restReqest);
+        request.setMethod('POST');
+		String[] strArr = new String[] {APP_ID, APP_SECRET, code, APP_REDIRECT_ADRESS};
+        request.setBody(String.format('client_id={0}&client_secret={1}&code={2}&grant_type=authorization_code&redirect_uri={3}', strArr));
+        HttpResponse response = http.send(request);
+        System.Debug(response.getBody());
+		Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
+        System.Debug(results.get('access_token'));
+		responseStr = String.valueOf(results.get('access_token'));
+        return responseStr;
+    }
+
+	public static string makeCalloutToCreateProject(string folderName) {
+        String restReqest = URL_FOR_CREATE_WITH_TOKEN + APP_ACCESS_TOKEN;
+        String responseStr = '';
+        Http http = new Http();
+        HttpRequest request = new HttpRequest();
+        request.setEndpoint(restReqest); 
+        request.setMethod('POST');
+        request.setHeader(HEADER_TYPE, HEADER_CHARSET_TYPE);
+        request.setBody('{"name":"' + folderName + '"}');
+        HttpResponse response = http.send(request);
+        if (response.getStatusCode() != 201) {
+            responseStr += String.valueOf(response.getBody());
+        } 
+		else {
+            responseStr += 'SUCCESS'; 
+        }
+        return responseStr;
+    }
+}

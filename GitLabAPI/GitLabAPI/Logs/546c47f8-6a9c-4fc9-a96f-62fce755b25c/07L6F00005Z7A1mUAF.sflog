@@ -1,0 +1,30 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: System.debug(GitLabUtils.makeCalloutToGetMostActiveCommiter('99'));
+02:01:40.1 (1766502)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+02:01:40.1 (1795011)|EXECUTION_STARTED
+02:01:40.1 (1801580)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+02:01:40.1 (2380518)|SYSTEM_MODE_ENTER|false
+02:01:40.1 (19812250)|CALLOUT_REQUEST|[88]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects/99/repository/commits?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033&with_stats=true, Method=GET]
+02:01:40.1 (600488303)|CALLOUT_RESPONSE|[88]|System.HttpResponse[Status=OK, StatusCode=200]
+02:01:40.1 (600968167)|USER_DEBUG|[90]|DEBUG|[]
+02:01:40.1 (601039632)|SYSTEM_MODE_EXIT|false
+02:01:40.1 (601058889)|USER_DEBUG|[1]|DEBUG|no one commited it
+02:01:40.603 (603065247)|CUMULATIVE_LIMIT_USAGE
+02:01:40.603 (603065247)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+02:01:40.603 (603065247)|CUMULATIVE_LIMIT_USAGE_END
+
+02:01:40.1 (603124552)|CODE_UNIT_FINISHED|execute_anonymous_apex
+02:01:40.1 (604220023)|EXECUTION_FINISHED

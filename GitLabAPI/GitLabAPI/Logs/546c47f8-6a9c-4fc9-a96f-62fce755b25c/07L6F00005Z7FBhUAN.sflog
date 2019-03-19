@@ -1,0 +1,31 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+08:29:33.0 (861734)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+08:29:33.0 (900172)|EXECUTION_STARTED
+08:29:33.0 (906790)|CODE_UNIT_STARTED|[EXTERNAL]|01p6F00000BdFP4|WorkWithCommitsTest.testCalloutToGetMostActiveCommiter()
+08:29:33.0 (5118052)|FATAL_ERROR|System.TypeException: Mock object doesn't implement the supplied interface
+
+Class.System.Test.setMock: line 57, column 1
+Class.WorkWithCommitsTest.testCalloutToGetMostActiveCommiter: line 5, column 1
+08:29:33.0 (5133163)|FATAL_ERROR|System.TypeException: Mock object doesn't implement the supplied interface
+
+Class.System.Test.setMock: line 57, column 1
+Class.WorkWithCommitsTest.testCalloutToGetMostActiveCommiter: line 5, column 1
+08:29:33.5 (5141102)|CUMULATIVE_LIMIT_USAGE
+08:29:33.5 (5141102)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+08:29:33.5 (5141102)|CUMULATIVE_LIMIT_USAGE_END
+
+08:29:33.0 (5178246)|CODE_UNIT_FINISHED|WorkWithCommitsTest.testCalloutToGetMostActiveCommiter()
+08:29:33.0 (6200677)|EXECUTION_FINISHED

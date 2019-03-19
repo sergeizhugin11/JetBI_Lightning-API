@@ -1,0 +1,50 @@
+<aura:component controller="GitLabStatisticsController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	<aura:handler name="init" value="{!this}" action="{!c.outputId}"/>
+	<aura:attribute name="projectList" type="List"/> 
+	<aura:attribute name="tempProjectList" type="List"/> 
+	<aura:attribute name="buttonstate" type="Boolean" default="false"/>
+    
+    <div class="slds-modal__container">
+        
+    	<div class="slds-page-header">
+        	<div class="slds-grid">
+            	<div class="slds-col slds-has-flexi-truncate">
+              		<p class="slds-text-title_caps slds-line-height_reset">Projectrs</p>
+              		<h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="My Contacts">GitLab projects and information about him</h1>
+            	</div>
+          	</div>
+		</div> 
+
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+				<thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate">Project name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">
+									Commits number
+								<lightning:buttonStateful
+									class="buttonStateful"
+									labelWhenOff=""
+									labelWhenOn=""
+									labelWhenHover=""
+									iconNameWhenOff="utility:jump_to_top"
+									iconNameWhenOn="utility:jump_to_bottom"
+									iconNameWhenHover=""
+									state="{! v.buttonstate }"
+									onclick="{!c.Sort}"/>								
+							</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Best commiter</div>
+                        </th>
+                    </tr>
+                </thead>
+				<tbody aura:id = "static_table">
+					{!v.body}
+				</tbody>
+        </table>
+ 		
+    </div>
+</aura:component>

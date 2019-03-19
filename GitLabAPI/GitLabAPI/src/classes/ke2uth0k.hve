@@ -1,0 +1,9 @@
+@isTest
+public class makeCalloutToCreateProjectTest  {
+	@isTest 
+	public static void testPostCalloutProject() {
+		Test.setMock(HttpCalloutMock.class, new makeCalloutToCreateProjectMock()); 
+		String actualValue = GitLabUtils.makeCalloutToCreateProject('123456');
+		System.assertEquals(actualValue, 'SUCCESS');
+	}
+}

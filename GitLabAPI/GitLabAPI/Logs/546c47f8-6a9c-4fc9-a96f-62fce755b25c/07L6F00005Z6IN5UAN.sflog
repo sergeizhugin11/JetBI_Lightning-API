@@ -1,0 +1,29 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetCommits('1');
+07:32:35.1 (1628523)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+07:32:35.1 (1649777)|EXECUTION_STARTED
+07:32:35.1 (1655182)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+07:32:35.1 (2082107)|SYSTEM_MODE_ENTER|false
+07:32:35.1 (20345093)|CALLOUT_REQUEST|[118]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects/1/repository/commits?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033&with_stats=true, Method=GET]
+07:32:35.1 (915902391)|CALLOUT_RESPONSE|[118]|System.HttpResponse[Status=OK, StatusCode=200]
+07:32:35.1 (921441103)|USER_DEBUG|[132]|DEBUG|(CommitsWrapper:[addLines=1734, authorName=Sergey, commitsName=Two types of autorization on Lab v.3, delLines=294], CommitsWrapper:[addLines=3469, authorName=Sergey, commitsName=Two types of autorization on Lab v.2, delLines=65], CommitsWrapper:[addLines=3, authorName=Sergey, commitsName=Two types of autorization on Lab, delLines=0], CommitsWrapper:[addLines=14089, authorName=Sergey, commitsName=Two types of autorization on GitLab, delLines=0], CommitsWrapper:[addLines=2, authorName=sergei.zhugin11, commitsName=Initial commit, delLines=0])
+07:32:35.1 (921472375)|SYSTEM_MODE_EXIT|false
+07:32:35.923 (923457572)|CUMULATIVE_LIMIT_USAGE
+07:32:35.923 (923457572)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+07:32:35.923 (923457572)|CUMULATIVE_LIMIT_USAGE_END
+
+07:32:35.1 (923528360)|CODE_UNIT_FINISHED|execute_anonymous_apex
+07:32:35.1 (924839325)|EXECUTION_FINISHED

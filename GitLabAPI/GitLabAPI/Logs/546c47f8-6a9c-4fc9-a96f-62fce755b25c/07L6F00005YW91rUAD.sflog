@@ -1,0 +1,58 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: public static string makeCalloutToGetCode(string folderName) {
+Execute Anonymous: 		Http http = new Http();
+Execute Anonymous:         HttpRequest request = new HttpRequest();
+Execute Anonymous:         request.setEndpoint('https://git-test.jetbi.com/oauth/authorize?client_id=94d7ab74fa34406de96b9e6fdd242d0c4cc463d71ea2351510db8d63c350930e&response_type=code&redirect_uri=http://sergeizhugin-developer-edition.ap4.force.com&state=1234567890');
+Execute Anonymous:         request.setMethod('GET');
+Execute Anonymous:         HttpResponse response = http.send(request);
+Execute Anonymous:         // If the request is successful, parse the JSON response.
+Execute Anonymous:         if (response.getStatusCode() == 200) {
+Execute Anonymous:             // Deserializes the JSON string into collections of primitive data types.
+Execute Anonymous:             Map<String, Object> results = (Map<String, Object>) JSON.deserializeUntyped(response.getBody());
+Execute Anonymous:             // Cast the values in the 'animals' key as a list
+Execute Anonymous:             List<Object> code = (List<Object>) results.get('code');
+Execute Anonymous:             System.debug(code);
+Execute Anonymous: 			return String.valueOf(code[0]);
+Execute Anonymous: 
+Execute Anonymous:         }
+Execute Anonymous:         return 'Error';
+Execute Anonymous:         //GitLabApp__c objGame = GitLabApp__c.getInstance();
+Execute Anonymous:         //System.debug(objGame);
+Execute Anonymous:         //String restReqest = 'https://git-test.jetbi.com/oauth/token';
+Execute Anonymous:         ////String restReqest = objGame.AppAdress__c + objGame.AppUniqueToken__c;
+Execute Anonymous:         //String responseStr = '';
+Execute Anonymous:         //String code = '17a4603d19f7e495418dd145b3da769d1d8514efa19509747ccf298da3d9a1d4';
+Execute Anonymous:         //Http http = new Http();
+Execute Anonymous:         //HttpRequest request = new HttpRequest();
+Execute Anonymous:         //request.setEndpoint(restReqest);
+Execute Anonymous:         //request.setMethod('POST');
+Execute Anonymous:        ////request.setHeader('Content-Type', 'application/json;charset=UTF-8');
+Execute Anonymous:         //request.setBody('client_id=94d7ab74fa34406de96b9e6fdd242d0c4cc463d71ea2351510db8d63c350930e&client_secret=6dc6651709e1439e88aac8a7c460fc566a8ef6f99832429361b3851449ce4e4f&code=' + code + '&grant_type=authorization_code&redirect_uri=http://sergeizhugin-developer-edition.ap4.force.com');
+Execute Anonymous:         //HttpResponse response = http.send(request);
+Execute Anonymous:         //// Parse the JSON response
+Execute Anonymous:         //System.Debug(response);
+Execute Anonymous:         //System.Debug(response.getBody());
+Execute Anonymous:         //return responseStr;
+Execute Anonymous:     }  
+07:40:01.2 (2299381)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+07:40:01.2 (2320891)|EXECUTION_STARTED
+07:40:01.2 (2327481)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+07:40:01.2 (2746579)|CUMULATIVE_LIMIT_USAGE
+07:40:01.2 (2746579)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 0 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+07:40:01.2 (2746579)|CUMULATIVE_LIMIT_USAGE_END
+
+07:40:01.2 (2790987)|CODE_UNIT_FINISHED|execute_anonymous_apex
+07:40:01.2 (3986139)|EXECUTION_FINISHED

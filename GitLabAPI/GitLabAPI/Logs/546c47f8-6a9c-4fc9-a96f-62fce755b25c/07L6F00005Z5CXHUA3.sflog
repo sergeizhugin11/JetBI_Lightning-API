@@ -1,0 +1,105 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: for(integer i = 0;i<20;i++)
+Execute Anonymous: GitLabUtils.makeCalloutToCreateProject('13214'+ String.valueOf(i));
+09:02:25.11 (11010904)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+09:02:25.11 (11040818)|EXECUTION_STARTED
+09:02:25.11 (11046792)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+09:02:25.11 (11595346)|SYSTEM_MODE_ENTER|false
+09:02:25.11 (15300370)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:25.11 (786521845)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:25.11 (786641979)|SYSTEM_MODE_EXIT|false
+09:02:25.11 (786702497)|SYSTEM_MODE_ENTER|false
+09:02:25.11 (794493444)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:26.163 (1163948614)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:26.163 (1164016422)|SYSTEM_MODE_EXIT|false
+09:02:26.163 (1164061050)|SYSTEM_MODE_ENTER|false
+09:02:26.163 (1166409026)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:26.163 (1545901492)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:26.163 (1545963231)|SYSTEM_MODE_EXIT|false
+09:02:26.163 (1546008345)|SYSTEM_MODE_ENTER|false
+09:02:26.163 (1548573833)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:26.163 (1916929813)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:26.163 (1917007538)|SYSTEM_MODE_EXIT|false
+09:02:26.163 (1917062533)|SYSTEM_MODE_ENTER|false
+09:02:26.163 (1919395794)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:27.266 (2266140508)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:27.266 (2266214301)|SYSTEM_MODE_EXIT|false
+09:02:27.266 (2266259482)|SYSTEM_MODE_ENTER|false
+09:02:27.266 (2272671651)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:27.266 (2638589175)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:27.266 (2638681582)|SYSTEM_MODE_EXIT|false
+09:02:27.266 (2638735699)|SYSTEM_MODE_ENTER|false
+09:02:27.266 (2642398751)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:27.266 (2986772732)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:27.266 (2986830998)|SYSTEM_MODE_EXIT|false
+09:02:27.266 (2986869820)|SYSTEM_MODE_ENTER|false
+09:02:27.266 (2989391891)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:28.348 (3348391996)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:28.348 (3348472542)|SYSTEM_MODE_EXIT|false
+09:02:28.348 (3348529765)|SYSTEM_MODE_ENTER|false
+09:02:28.348 (3351822889)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:28.348 (3706509775)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:28.348 (3706573683)|SYSTEM_MODE_EXIT|false
+09:02:28.348 (3708801427)|SYSTEM_MODE_ENTER|false
+09:02:28.348 (3708925981)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:28.348 (4063765343)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:28.348 (4063843026)|SYSTEM_MODE_EXIT|false
+09:02:28.348 (4063901338)|SYSTEM_MODE_ENTER|false
+09:02:28.348 (4067281121)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:29.421 (4421939377)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:29.421 (4422007817)|SYSTEM_MODE_EXIT|false
+09:02:29.421 (4422048427)|SYSTEM_MODE_ENTER|false
+09:02:29.421 (4424430837)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:29.421 (4786610792)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:29.421 (4786726084)|SYSTEM_MODE_EXIT|false
+09:02:29.421 (4786818021)|SYSTEM_MODE_ENTER|false
+09:02:29.421 (4789462668)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:29.421 (5161780584)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:29.421 (5161871552)|SYSTEM_MODE_EXIT|false
+09:02:29.421 (5161926000)|SYSTEM_MODE_ENTER|false
+09:02:29.421 (5164878987)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:30.528 (5528847489)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:30.528 (5528922452)|SYSTEM_MODE_EXIT|false
+09:02:30.528 (5531760223)|SYSTEM_MODE_ENTER|false
+09:02:30.528 (5531883472)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:30.528 (5894976277)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:30.528 (5895040896)|SYSTEM_MODE_EXIT|false
+09:02:30.528 (5895088643)|SYSTEM_MODE_ENTER|false
+09:02:30.528 (5897801035)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:30.528 (6262977411)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:30.528 (6263043358)|SYSTEM_MODE_EXIT|false
+09:02:30.528 (6263090381)|SYSTEM_MODE_ENTER|false
+09:02:30.528 (6265385080)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:31.614 (6614049181)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:31.614 (6614125930)|SYSTEM_MODE_EXIT|false
+09:02:31.614 (6614176709)|SYSTEM_MODE_ENTER|false
+09:02:31.614 (6616370363)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:31.614 (6993234794)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:31.614 (6993303417)|SYSTEM_MODE_EXIT|false
+09:02:31.614 (6993350169)|SYSTEM_MODE_ENTER|false
+09:02:31.614 (6995468222)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:31.614 (7341812086)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:31.614 (7341913871)|SYSTEM_MODE_EXIT|false
+09:02:31.614 (7341974509)|SYSTEM_MODE_ENTER|false
+09:02:31.614 (7345092264)|CALLOUT_REQUEST|[54]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=7252b7e80e32f27d3e366ac5e1f321e4fdbfccd580b4f7a902ff3653b3101033, Method=POST]
+09:02:32.693 (7693630010)|CALLOUT_RESPONSE|[54]|System.HttpResponse[Status=Created, StatusCode=201]
+09:02:32.693 (7693750677)|SYSTEM_MODE_EXIT|false
+09:02:32.697 (7697011506)|CUMULATIVE_LIMIT_USAGE
+09:02:32.697 (7697011506)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 47 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 20 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:02:32.697 (7697011506)|CUMULATIVE_LIMIT_USAGE_END
+
+09:02:32.693 (7697118174)|CODE_UNIT_FINISHED|execute_anonymous_apex
+09:02:32.693 (7698516614)|EXECUTION_FINISHED

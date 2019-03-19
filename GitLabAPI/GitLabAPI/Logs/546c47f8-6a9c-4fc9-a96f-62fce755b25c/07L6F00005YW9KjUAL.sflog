@@ -1,0 +1,30 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToGetCode();
+08:22:25.1 (1468806)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+08:22:25.1 (1488130)|EXECUTION_STARTED
+08:22:25.1 (1492515)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+08:22:25.1 (1909477)|SYSTEM_MODE_ENTER|false
+08:22:25.1 (13841805)|USER_DEBUG|[30]|DEBUG|12345
+08:22:25.1 (13992572)|CALLOUT_REQUEST|[35]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/oauth/authorize?client_id=94d7ab74fa34406de96b9e6fdd242d0c4cc463d71ea2351510db8d63c350930e&response_type=code&redirect_uri=http://sergeizhugin-developer-edition.ap4.force.com&state=1234567890, Method=GET]
+08:22:25.1 (788374568)|CALLOUT_RESPONSE|[35]|System.HttpResponse[Status=Found, StatusCode=302]
+08:22:25.1 (788496314)|USER_DEBUG|[39]|DEBUG|<html><body>You are being <a href="https://git-test.jetbi.com/users/sign_in">redirected</a>.</body></html>
+08:22:25.1 (788521205)|SYSTEM_MODE_EXIT|false
+08:22:25.790 (790531635)|CUMULATIVE_LIMIT_USAGE
+08:22:25.790 (790531635)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+08:22:25.790 (790531635)|CUMULATIVE_LIMIT_USAGE_END
+
+08:22:25.1 (790581557)|CODE_UNIT_FINISHED|execute_anonymous_apex
+08:22:25.1 (791472436)|EXECUTION_FINISHED

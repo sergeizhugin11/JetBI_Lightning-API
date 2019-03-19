@@ -1,0 +1,11 @@
+.THIS {
+}
+.THIS .slds-button
+{
+    float: right;
+}
+.THIS .input-select
+{
+    border-radius: 15%;
+    border-color: grey;
+}

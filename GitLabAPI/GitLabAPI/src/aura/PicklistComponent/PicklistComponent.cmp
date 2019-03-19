@@ -1,0 +1,103 @@
+<aura:component controller="ApplicationController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	<aura:handler name="init" value="{!this}" action="{!c.outputPicklist}"/>
+    
+    <aura:attribute name="SensorsPicklist" type="String[]" default="1"/>
+    <aura:attribute name="Sensor" type="Sensor__c"/>
+	<aura:attribute name="SensorEvents" type="Sensor_Event__c[]"/>
+   	<aura:attribute name="isOpen" type="boolean" default="false"/>
+    
+    <div class="slds-modal__container">
+        
+    	<div class="slds-page-header">
+        	<div class="slds-grid">
+            	<div class="slds-col slds-has-flexi-truncate">
+              		<p class="slds-text-title_caps slds-line-height_reset">My application</p>
+              		<h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="My Contacts">Smart Work Space</h1>
+            	</div>
+          	</div>
+		</div> 
+        
+        <div class="slds-modal__content slds-p-around--medium">
+        	<div class="slds-grid slds-wrap">
+            	<div class="slds-size--1-of-2 slds-large-size--1-of-2">
+                	<div class="slds-align--absolute-center">Select a Sensor</div>                            
+                </div>
+                <div class="slds-size--1-of-2 slds-large-size--1-of-2">
+                	<ui:inputSelect aura:id="selectid" class="input-select">
+                    	<aura:iteration items="{!v.SensorsPicklist}" var="SensorName">                            
+                        	<ui:inputSelectOption text="{!SensorName}" label="{!SensorName}"/>
+                        </aura:iteration>
+                    </ui:inputSelect>
+                 	<lightning:button class="slds-button slds-button--brand" onclick="{!c.viewRecords}">View records</lightning:button>
+                 </div>
+			</div>                   
+		</div>
+        
+        <aura:if isTrue="{!v.isOpen}">
+        	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                
+            	<thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">
+                            <div class="slds-truncate">Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Max Vectors Difference</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">X</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Y</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate">Z</div>
+                        </th>
+                    </tr>
+                </thead>
+                
+				<tbody>
+            		<aura:iteration items="{!v.SensorEvents}" var="item">
+                        <tr>
+                            <th scope = "row">
+                                <div class = "slds-truncate">{!v.Sensor.Name}</div>
+                            </th>
+                            <td>
+                                <div class = "slds-truncate">{!v.Sensor.Max_Vectors_Difference__c}</div>
+                            </td>
+                            <td>
+                                <div class = "slds-truncate"><lightning:input type="number" required="true" value="{!item.x__c}" default  = "1"></lightning:input></div>
+                            </td>
+                            <td>
+                                <div class = "slds-truncate"><lightning:input type="number" required="true" value="{!item.y__c}" default  = "1"></lightning:input></div>
+                            </td>
+                            <td>
+                                <div class = "slds-truncate"><lightning:input type="number" required="true" value="{!item.z__c}" default  = "1"></lightning:input></div>
+                            </td>
+                        </tr>
+					</aura:iteration>
+                    
+                	<tr>
+                     	<th scope = "row">
+                        	<div class = "slds-truncate"></div>
+                        </th>
+                       	<td>
+                        	<div class = "slds-truncate"></div>
+                       	</td>
+                        <td>
+                        	<div class = "slds-truncate"></div>
+                        </td>
+                        <td>
+                        	<div class = "slds-truncate"></div>
+                       	</td>
+                        <td>
+                        	<div class = "slds-truncate"><lightning:button class="slds-button slds-button--brand" onclick="{!c.updateSensor}">Update</lightning:button></div>
+                        </td>
+					</tr>
+				</tbody>
+                
+            </table>
+ 		</aura:if>   
+        
+    </div>
+</aura:component>

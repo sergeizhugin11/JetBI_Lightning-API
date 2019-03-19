@@ -1,0 +1,33 @@
+({
+	makeCalloutToGetProjectStatistics : function(component) {
+		var sPageURL = decodeURIComponent(window.location.search.substring(1));
+        var sURLVariables = sPageURL.split('&');
+        var sParameterName;
+        var i;
+
+        for (i = 0; i < sURLVariables.length; i++) {
+            sParameterName = sURLVariables[i].split('=');
+
+            if (sParameterName[0] === 'projectId') {
+                sParameterName[1] === undefined ? 'Not found' : sParameterName[1];
+            }
+			if (sParameterName[2] === 'projectName') {
+                sParameterName[3] === undefined ? 'Not found' : sParameterName[3];
+            }
+        }
+		component.set('v.progectName', sParameterName[3]); 
+		var action = component.get("c.getProjectCommits");
+      	action.setParams({
+        	"projectId": sParameterName[1]
+      	});
+        action.setCallback(this, function(response) { 
+			var state = response.getState();
+          	if (state === "SUCCESS")  {
+				console.log(response.getReturnValue());
+            	component.set('v.commitsInf', response.getReturnValue()); 
+			}
+          	else {alert('Error');}
+        });
+        $A.enqueueAction(action);
+	}
+})

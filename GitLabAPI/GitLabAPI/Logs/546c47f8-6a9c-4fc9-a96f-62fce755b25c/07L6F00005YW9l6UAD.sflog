@@ -1,0 +1,29 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+Execute Anonymous: GitLabUtils.makeCalloutToCreateProject('9331381fdab5d89fae3387ae0a0fcc128e480c713fa1c9648b6231f365f1628e','reposit');
+09:27:35.2 (2366802)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+09:27:35.2 (2397278)|EXECUTION_STARTED
+09:27:35.2 (2404394)|CODE_UNIT_STARTED|[EXTERNAL]|execute_anonymous_apex
+09:27:35.2 (2908885)|SYSTEM_MODE_ENTER|false
+09:27:35.2 (18311758)|CALLOUT_REQUEST|[69]|System.HttpRequest[Endpoint=https://git-test.jetbi.com/api/v4/projects?access_token=9331381fdab5d89fae3387ae0a0fcc128e480c713fa1c9648b6231f365f1628e, Method=POST]
+09:27:36.38 (1038588953)|CALLOUT_RESPONSE|[69]|System.HttpResponse[Status=Created, StatusCode=201]
+09:27:36.38 (1038833196)|USER_DEBUG|[74]|DEBUG|{"id":19,"description":null,"name":"reposit","name_with_namespace":"sergei.zhugin11 / reposit","path":"reposit","path_with_namespace":"sergei.zhugin11/reposit","created_at":"2019-02-07T17:27:36.560Z","default_branch":null,"tag_list":[],"ssh_url_to_repo":"git@git-test.jetbi.com:sergei.zhugin11/reposit.git","http_url_to_repo":"https://git-test.jetbi.com/sergei.zhugin11/reposit.git","web_url":"https://git-test.jetbi.com/sergei.zhugin11/reposit","readme_url":null,"avatar_url":null,"star_count":0,"forks_count":0,"last_activity_at":"2019-02-07T17:27:36.560Z","namespace":{"id":4,"name":"sergei.zhugin11","path":"sergei.zhugin11","kind":"user","full_path":"sergei.zhugin11","parent_id":null},"_links":{"self":"https://git-test.jetbi.com/api/v4/projects/19","issues":"https://git-test.jetbi.com/api/v4/projects/19/issues","merge_requests":"https://git-test.jetbi.com/api/v4/projects/19/merge_requests","repo_branches":"https://git-test.jetbi.com/api/v4/projects/19/repository/branches","labels":"https://git-test.jetbi.com/api/v4/projects/19/labels","events":"https://git-test.jetbi.com/api/v4/projects/19/events","members":"https://git-test.jetbi.com/api/v4/projects/19/members"},"archived":false,"visibility":"private","owner":{"id":4,"name":"sergei.zhugin11","username":"sergei.zhugin11","state":"active","avatar_url":"https://secure.gravatar.com/avatar/583d60431543c5dc5f48ebd1bcad5488?s=80\u0026d=identicon","web_url":"https://git-test.jetbi.com/sergei.zhugin11"},"resolve_outdated_diff_discussions":false,"container_registry_enabled":true,"issues_enabled":true,"merge_requests_enabled":true,"wiki_enabled":true,"jobs_enabled":true,"snippets_enabled":true,"shared_runners_enabled":true,"lfs_enabled":true,"creator_id":4,"import_status":"none","import_error":null,"open_issues_count":0,"runners_token":"cwpDgP6RNAXPN5yLm1EN","public_jobs":true,"ci_config_path":null,"shared_with_groups":[],"only_allow_merge_if_pipeline_succeeds":false,"request_access_enabled":false,"only_allow_merge_if_all_discussions_are_resolved":false,"printing_merge_request_link_enabled":true,"merge_method":"merge"}
+09:27:36.38 (1038890406)|SYSTEM_MODE_EXIT|false
+09:27:36.41 (1041694784)|CUMULATIVE_LIMIT_USAGE
+09:27:36.41 (1041694784)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+09:27:36.41 (1041694784)|CUMULATIVE_LIMIT_USAGE_END
+
+09:27:36.38 (1041739741)|CODE_UNIT_FINISHED|execute_anonymous_apex
+09:27:36.38 (1043010721)|EXECUTION_FINISHED

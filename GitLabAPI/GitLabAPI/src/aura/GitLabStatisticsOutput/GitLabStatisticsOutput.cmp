@@ -1,0 +1,21 @@
+<aura:component controller="GitLabStatisticsOutputController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global">
+	<aura:handler name="init" value="{!this}" action="{!c.outputGetResults}"/>
+
+	<aura:attribute name="project" type="StatisticsWrapper"/>
+	<aura:if isTrue="{!(v.project.bestCommiter.length > 0)}">
+		<tr>			
+			<td><a href="{!('ProjectCommitsApp.app?projectId=' + v.project.projectId + '&#38;projectName=' + v.project.nameOfProject)}">{!v.project.nameOfProject}</a></td>
+			<td style="padding: 0 0 0 70px">{!v.project.commits}</td> 
+			<td>{!v.project.bestCommiter}</td>
+		</tr>
+	<aura:set attribute="else">
+		<tr Style="height:30px;">
+			<td></td>
+			<td Align="center">
+				<lightning:spinner Align="center" alternativeText="Loading" size="small"/>	
+			</td>
+			<td></td>
+		</tr>					
+	</aura:set>
+	</aura:if>
+</aura:component>

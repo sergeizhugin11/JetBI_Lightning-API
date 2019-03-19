@@ -1,0 +1,39 @@
+42.0 APEX_CODE,DEBUG;APEX_PROFILING,INFO;CALLOUT,INFO;DB,INFO;NBA,INFO;SYSTEM,DEBUG;VALIDATION,INFO;VISUALFORCE,INFO;WAVE,INFO;WORKFLOW,INFO
+06:40:57.1 (1100809)|USER_INFO|[EXTERNAL]|0056F00000A9qAS|sergei.zhugin12-1@gmail.com|Pacific Standard Time|GMT-08:00
+06:40:57.1 (1188342)|EXECUTION_STARTED
+06:40:57.1 (1202524)|CODE_UNIT_STARTED|[EXTERNAL]|01p6F00000BdFP4|WorkWithCommitsTest.testCalloutToGetMostActiveCommiter()
+06:40:57.1 (9731792)|SYSTEM_MODE_ENTER|false
+06:40:57.1 (11860763)|SYSTEM_MODE_EXIT|false
+06:40:57.1 (11960132)|SYSTEM_MODE_ENTER|false
+06:40:57.1 (12778110)|CALLOUT_REQUEST|[121]|System.HttpRequest[Endpoint=https://null/api/v4/projects/1/repository/commits?access_token=null&with_stats=true, Method=GET]
+06:40:57.1 (13407598)|CALLOUT_RESPONSE|[121]|System.HttpResponse[Status=null, StatusCode=200]
+06:40:57.1 (17037479)|SYSTEM_MODE_EXIT|false
+06:40:57.1 (17109019)|FATAL_ERROR|System.JSONException: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value at [line:1, column:266]
+
+Class.System.JSON.deserializeUntyped: line 11, column 1
+Class.GitLabUtils.makeCalloutToGetMostActiveCommiter: line 84, column 1
+Class.WorkWithCommitsTest.testCalloutToGetMostActiveCommiter: line 6, column 1
+06:40:57.1 (17129706)|FATAL_ERROR|System.JSONException: Illegal unquoted character ((CTRL-CHAR, code 10)): has to be escaped using backslash to be included in string value at [line:1, column:266]
+
+Class.System.JSON.deserializeUntyped: line 11, column 1
+Class.GitLabUtils.makeCalloutToGetMostActiveCommiter: line 84, column 1
+Class.WorkWithCommitsTest.testCalloutToGetMostActiveCommiter: line 6, column 1
+06:40:57.17 (17158231)|CUMULATIVE_LIMIT_USAGE
+06:40:57.17 (17158231)|LIMIT_USAGE_FOR_NS|(default)|
+  Number of SOQL queries: 0 out of 100
+  Number of query rows: 0 out of 50000
+  Number of SOSL queries: 0 out of 20
+  Number of DML statements: 0 out of 150
+  Number of DML rows: 0 out of 10000
+  Maximum CPU time: 0 out of 10000
+  Maximum heap size: 0 out of 6000000
+  Number of callouts: 1 out of 100
+  Number of Email Invocations: 0 out of 10
+  Number of future calls: 0 out of 50
+  Number of queueable jobs added to the queue: 0 out of 50
+  Number of Mobile Apex push calls: 0 out of 10
+
+06:40:57.17 (17158231)|CUMULATIVE_LIMIT_USAGE_END
+
+06:40:57.1 (17227858)|CODE_UNIT_FINISHED|WorkWithCommitsTest.testCalloutToGetMostActiveCommiter()
+06:40:57.1 (19278434)|EXECUTION_FINISHED
